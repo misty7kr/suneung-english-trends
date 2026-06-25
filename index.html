@@ -1,0 +1,1131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="평가원 수능 영어 13회차(2022~2026) 기출 전수 분석. 유형별 정답 패턴·킬러 전략·1등급 풀이 순서.">
+<title>수능 영어 트렌드 리포트 — 13회차 평가원 전수 분석</title>
+<link rel="preconnect" href="https://cdn.jsdelivr.net">
+<link href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard/dist/web/static/pretendard.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root{
+  --bg:#FAF9F6;
+  --dark:#1A1D29;
+  --navy:#00457F;
+  --navy-mid:#1a5fa0;
+  --amber:#FFA723;
+  --amber-dark:#cc8100;
+  --ice:#EDF5FA;
+  --white:#ffffff;
+  --text:#1A1A1A;
+  --muted:#5a6474;
+  --border:#dde3ec;
+  --radius:12px;
+  --radius-sm:8px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Pretendard',-apple-system,BlinkMacSystemFont,sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  font-size:16px;
+  line-height:1.6;
+}
+
+/* NAV */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:rgba(250,249,246,0.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  border-bottom:1px solid var(--border);
+  padding:0 1.5rem;
+}
+.nav-inner{
+  max-width:1100px;margin:0 auto;
+  display:flex;align-items:center;gap:1.5rem;
+  height:52px;overflow-x:auto;
+  scrollbar-width:none;
+}
+.nav-inner::-webkit-scrollbar{display:none}
+.nav-logo{
+  font-size:13px;font-weight:700;color:var(--navy);
+  white-space:nowrap;margin-right:auto;flex-shrink:0;
+}
+nav a{
+  font-size:13px;color:var(--muted);text-decoration:none;
+  white-space:nowrap;flex-shrink:0;
+  padding:4px 0;
+  border-bottom:2px solid transparent;
+  transition:color .2s,border-color .2s;
+}
+nav a:hover{color:var(--navy);border-bottom-color:var(--navy)}
+
+/* LAYOUT */
+.wrap{max-width:1100px;margin:0 auto;padding:0 1.5rem}
+
+/* HERO */
+.hero{
+  background:var(--dark);
+  padding:4rem 1.5rem 3.5rem;
+}
+.hero-inner{max-width:1100px;margin:0 auto}
+.hero-tag{
+  display:inline-block;
+  background:var(--amber);color:var(--dark);
+  font-size:12px;font-weight:700;
+  padding:4px 12px;border-radius:20px;
+  margin-bottom:1.25rem;letter-spacing:.04em;
+}
+.hero h1{
+  font-size:clamp(28px,5vw,52px);font-weight:800;
+  color:var(--white);line-height:1.15;
+  margin-bottom:1rem;
+}
+.hero h1 em{color:var(--amber);font-style:normal}
+.hero-sub{
+  font-size:clamp(14px,2vw,18px);color:rgba(255,255,255,.6);
+  margin-bottom:2.5rem;max-width:600px;
+}
+.hero-stats{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(110px,1fr));
+  gap:12px;max-width:700px;
+}
+.hero-stat{
+  background:rgba(255,255,255,.07);
+  border:1px solid rgba(255,255,255,.12);
+  border-radius:var(--radius-sm);
+  padding:1rem;
+}
+.hero-stat .n{
+  font-size:28px;font-weight:800;color:var(--amber);
+  line-height:1;margin-bottom:4px;
+}
+.hero-stat .l{font-size:12px;color:rgba(255,255,255,.5)}
+
+/* SECTION TITLES */
+section{padding:3.5rem 0 2rem}
+.sec-label{
+  font-size:12px;font-weight:700;color:var(--amber);
+  letter-spacing:.1em;margin-bottom:.5rem;
+}
+.sec-title{
+  font-size:clamp(20px,3vw,28px);font-weight:800;
+  color:var(--dark);line-height:1.2;margin-bottom:.5rem;
+}
+.sec-desc{font-size:14px;color:var(--muted);margin-bottom:2rem}
+
+/* CARDS */
+.card{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:1.5rem;
+}
+.card-sm{padding:1rem 1.25rem}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.grid-auto{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
+
+/* HEATMAP */
+.heatmap-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch}
+.heatmap{
+  display:grid;
+  grid-template-columns:60px repeat(13,1fr);
+  gap:3px;min-width:620px;
+}
+.hm-header{
+  font-size:10px;color:var(--muted);text-align:center;
+  padding:4px 2px;white-space:nowrap;
+  display:flex;align-items:center;justify-content:center;
+}
+.hm-qn{
+  font-size:11px;font-weight:600;color:var(--muted);
+  display:flex;align-items:center;padding-right:6px;
+}
+.hm-cell{
+  height:28px;border-radius:4px;
+  display:flex;align-items:center;justify-content:center;
+  font-size:11px;font-weight:700;
+  cursor:default;
+}
+
+/* STRATEGY CARDS */
+.strat{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-left:4px solid var(--navy);
+  border-radius:var(--radius);
+  padding:1.25rem 1.5rem;
+  margin-bottom:12px;
+}
+.strat.amber{border-left-color:var(--amber)}
+.strat.red{border-left-color:#e34054}
+.strat.green{border-left-color:#05A66B}
+.strat-head{
+  display:flex;align-items:center;gap:10px;
+  margin-bottom:.75rem;
+}
+.badge{
+  font-size:11px;font-weight:700;
+  padding:3px 10px;border-radius:20px;
+  white-space:nowrap;
+}
+.badge-navy{background:#EDF5FA;color:#00457F}
+.badge-amber{background:#fff3dc;color:#cc8100}
+.badge-red{background:#fee;color:#b80000}
+.badge-green{background:#e6f7f0;color:#027a50}
+.strat-title{font-size:15px;font-weight:700;color:var(--dark)}
+.strat ul{
+  padding-left:1rem;
+  font-size:14px;color:var(--muted);
+  line-height:1.9;
+}
+.strat ul li{margin-bottom:2px}
+.strat ul strong{color:var(--dark)}
+
+/* BIG NUMBER */
+.big-num{
+  font-size:clamp(40px,6vw,64px);font-weight:800;
+  line-height:1;margin-bottom:6px;
+}
+.big-label{font-size:13px;color:var(--muted)}
+
+/* CHART WRAP */
+.chart-box{position:relative;width:100%}
+
+/* TIMELINE ROW */
+.timeline-row{
+  display:flex;gap:6px;align-items:center;
+  font-size:12px;margin-bottom:6px;flex-wrap:wrap;
+}
+.tl-label{
+  width:52px;flex-shrink:0;
+  font-size:11px;color:var(--muted);font-weight:600;
+}
+.tl-dot{
+  width:28px;height:28px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-size:12px;font-weight:800;flex-shrink:0;
+  border:2px solid transparent;
+}
+.tl-dot.top{
+  background:var(--dark);color:var(--amber);
+  border-color:var(--amber);
+}
+.tl-dot.normal{background:var(--ice);color:var(--navy)}
+.tl-dot.suneung{
+  background:var(--navy);color:var(--white);
+}
+
+/* FLOW */
+.flow{display:flex;flex-direction:column;gap:0}
+.flow-step{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:14px 0;border-bottom:1px dashed var(--border);
+}
+.flow-step:last-child{border-bottom:none}
+.flow-num{
+  width:32px;height:32px;border-radius:50%;
+  flex-shrink:0;display:flex;align-items:center;justify-content:center;
+  font-size:13px;font-weight:800;
+  background:var(--dark);color:var(--amber);
+}
+.flow-content h4{font-size:14px;font-weight:700;margin-bottom:3px}
+.flow-content p{font-size:13px;color:var(--muted);line-height:1.6}
+.flow-content .time{
+  font-size:11px;font-weight:700;
+  color:var(--amber-dark);
+  background:#fff3dc;
+  padding:2px 8px;border-radius:10px;
+  display:inline-block;margin-top:4px;
+}
+
+/* TABLE */
+table{width:100%;border-collapse:collapse;font-size:14px}
+th{
+  background:var(--dark);color:var(--white);
+  font-size:12px;font-weight:600;
+  padding:10px 12px;text-align:left;
+}
+th:first-child{border-radius:8px 0 0 0}
+th:last-child{border-radius:0 8px 0 0}
+td{padding:10px 12px;border-bottom:1px solid var(--border);color:var(--text)}
+tr:last-child td{border-bottom:none}
+tr:hover td{background:var(--ice)}
+.ans-pill{
+  display:inline-flex;align-items:center;justify-content:center;
+  width:28px;height:28px;border-radius:50%;
+  font-size:13px;font-weight:800;
+}
+.ans-high{background:var(--dark);color:var(--amber)}
+.ans-mid{background:var(--ice);color:var(--navy)}
+.ans-low{background:#f4f4f4;color:var(--muted)}
+
+/* DIVIDER */
+.divider{
+  height:1px;background:var(--border);
+  margin:0;
+}
+
+/* CALLOUT */
+.callout{
+  background:var(--ice);
+  border:1px solid #b8d4e8;
+  border-radius:var(--radius);
+  padding:1.25rem 1.5rem;
+  font-size:14px;color:var(--navy);
+  margin-bottom:1.5rem;
+  line-height:1.7;
+}
+.callout strong{font-weight:700}
+
+/* FOOTER */
+footer{
+  background:var(--dark);
+  color:rgba(255,255,255,.4);
+  text-align:center;
+  font-size:12px;
+  padding:2rem 1.5rem;
+  margin-top:4rem;
+}
+
+/* MOBILE */
+@media(max-width:640px){
+  .grid-2,.grid-3{grid-template-columns:1fr}
+  .hero{padding:2.5rem 1.25rem 2.5rem}
+  section{padding:2.5rem 0 1rem}
+  .wrap{padding:0 1.25rem}
+  nav{padding:0 1rem}
+  .strat ul{font-size:13px}
+  table{font-size:13px}
+  th,td{padding:8px 10px}
+}
+@media(max-width:400px){
+  .hero-stats{grid-template-columns:1fr 1fr}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav aria-label="페이지 내비게이션">
+  <div class="nav-inner">
+    <span class="nav-logo">수능영어 트렌드</span>
+    <a href="#listening">듣기 분석</a>
+    <a href="#heatmap">전체 히트맵</a>
+    <a href="#killer">킬러 전략</a>
+    <a href="#35-39">흐름·삽입</a>
+    <a href="#q21">함의 전략</a>
+    <a href="#strategy">풀이 순서</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero" role="banner">
+  <div class="hero-inner">
+    <p class="hero-tag">ANALYSIS REPORT</p>
+    <h1>수능 영어<br><em>트렌드 리포트</em></h1>
+    <p class="hero-sub">평가원 13회차(2022~2026학년도) 전수 분석 — 정답 패턴, 킬러 전략, 1등급 풀이 순서</p>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">13</div><div class="l">분석 회차</div></div>
+      <div class="hero-stat"><div class="n">28</div><div class="l">독해 문항</div></div>
+      <div class="hero-stat"><div class="n">5</div><div class="l">실제 수능</div></div>
+      <div class="hero-stat"><div class="n">8</div><div class="l">평가원 모평</div></div>
+    </div>
+  </div>
+</header>
+
+<!-- 0. LISTENING -->
+<section id="listening">
+  <div class="wrap">
+    <p class="sec-label">SECTION 01</p>
+    <h2 class="sec-title">듣기 1~17번 정답 패턴</h2>
+    <p class="sec-desc">듣기도 정답 쏠림이 존재한다. 시험장에서 헷갈릴 때 통계 근거로 활용 가능.</p>
+
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">1~17번 전체 정답 분포 (13회 × 17문항 = 221개)</div>
+        <div style="position:relative;width:100%;height:180px"><canvas id="chartListeningDist" role="img" aria-label="듣기 1-17번 정답 분포"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px">① 최다(46회, 21%). 듣기는 독해보다 ① 쏠림 강함.</p>
+      </div>
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">문항별 최빈 정답 (13회 기준)</div>
+        <div id="listeningBias" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(80px,1fr));gap:6px"></div>
+      </div>
+    </div>
+
+    <div class="strat">
+      <div class="strat-head">
+        <span class="badge badge-navy">듣기 전략</span>
+        <span class="strat-title">쏠림 패턴 활용법</span>
+      </div>
+      <ul>
+        <li>11번(도표): <strong>①② 쏠림 강함</strong>(13회 중 ① 5회 · ② 4회). 도표 불일치 항목이 상단에 많음</li>
+        <li>14·15번(긴 대화): ①② 합산 비율 높음. 선택지 앞 번호 위주로 집중 청취</li>
+        <li>1번(짧은 대화 목적): ① 최다. 대화 마지막 문장에서 목적 확인</li>
+        <li>헷갈릴 때만 쏠림 참고. <strong>근거 없는 번호 찍기는 금지</strong></li>
+      </ul>
+    </div>
+
+    <div style="margin-top:1.5rem">
+      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">회차별 듣기 정답 추이 (1·11·14번)</div>
+      <div style="position:relative;width:100%;height:200px"><canvas id="chartListeningTrend" role="img" aria-label="듣기 주요 문항 정답 추이"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 1b. HEATMAP -->
+<section id="heatmap">
+  <div class="wrap">
+    <p class="sec-label">SECTION 02</p>
+    <h2 class="sec-title">전 문항 정답 히트맵 (1~45번)</h2>
+    <p class="sec-desc">1~45번 전체 × 13회차 정답번호. 색이 진할수록 높은 번호(⑤), 밝을수록 낮은 번호(①). 회색 구분선이 듣기(1~17)와 독해(18~45) 경계.</p>
+
+    <div class="card" style="padding:1.5rem">
+      <div class="heatmap-wrap">
+        <div class="heatmap" id="heatmapGrid"></div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--muted)">정답번호</span>
+        <div style="display:flex;gap:6px;align-items:center">
+          <div style="width:16px;height:16px;border-radius:3px;background:#EDF5FA"></div><span style="font-size:11px;color:var(--muted)">①</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#9abfd8"></div><span style="font-size:11px;color:var(--muted)">②</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#4a8ab5"></div><span style="font-size:11px;color:var(--muted)">③</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#FFA723"></div><span style="font-size:11px;color:var(--muted)">④</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#00457F"></div><span style="font-size:11px;color:var(--muted)">⑤</span>
+        </div>
+        <span style="font-size:12px;color:var(--muted)">/ 테두리: 수능</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 2. KILLER -->
+<section id="killer">
+  <div class="wrap">
+    <p class="sec-label">SECTION 02</p>
+    <h2 class="sec-title">킬러 문항 심층 전략</h2>
+    <p class="sec-desc">31·32·33번(빈칸), 38·39번(삽입). 배점 3점짜리가 2~3문항 몰린 영역. 13회차 데이터로 패턴을 찾는다.</p>
+
+    <div class="callout">
+      <strong>빈칸 31번의 전략적 전환.</strong> 2024학년도 수능까지는 지문 뒷부분(5~6번째 문장, 70% 이상 지점)에 빈칸이 배치됐다. 2025학년도 9월부터 지금까지 5회 연속 지문 <strong>앞부분(1~2번째 문장, 14% 이하)</strong>으로 이동. 결론을 먼저 추론하던 방식에서 <strong>전체 지문을 읽고 주제 문장을 채우는 방식</strong>으로 전략을 바꿔야 한다.
+    </div>
+
+    <div class="grid-auto" style="margin-bottom:1.5rem">
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">31번 빈칸 — 최빈 정답</div>
+        <div class="big-num" style="color:var(--navy)">②</div>
+        <div class="big-label">13회 중 6회 (46%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">① 2회 · ③ 2회 · ⑤ 3회</div>
+      </div>
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">33번 빈칸(킬러) — 최빈 정답</div>
+        <div class="big-num" style="color:var(--navy)">①</div>
+        <div class="big-label">13회 중 6회 (46%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">② 2회 · ④ 3회 · ⑤ 2회</div>
+      </div>
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">29번 어법 — 최빈 정답</div>
+        <div class="big-num" style="color:var(--navy)">②</div>
+        <div class="big-label">13회 중 7회 (54%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">③ 4회 · ④ 1회 · ⑤ 1회</div>
+      </div>
+    </div>
+
+    <div class="strat">
+      <div class="strat-head">
+        <span class="badge badge-red">킬러 3점</span>
+        <span class="strat-title">31~33번 빈칸추론 — 논리 구조 독해</span>
+      </div>
+      <ul>
+        <li>빈칸 앞뒤 <strong>1~2문장의 핵심 키워드</strong>를 먼저 추출. 선지를 대입해 문장이 성립하는지 확인</li>
+        <li>오답 패턴 3종: ①빈칸 근처 단어 재활용(범위 혼동) ②반대 방향 개념(역관계) ③무관한 일반어(표면 유사)</li>
+        <li>31번 최근 5회: <strong>지문 첫 문장이 빈칸</strong> → 뒷 문장 전체가 빈칸 근거. 전체 읽고 역추론</li>
+        <li>단어형 선지(1단어)는 지문의 <strong>반의어/유의어 대비</strong>가 핵심 변별 포인트</li>
+        <li><strong>1등급</strong>: 빈칸 주변 3문장으로 45초 결정 → 33번은 지문 전체 논지 파악 후</li>
+        <li><strong>2등급</strong>: 오답 소거 후 남은 2개에서 지문 전체 스캔</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:2rem;margin-bottom:1rem">
+      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">31번 빈칸 위치 추이 — 지문 내 비율(%)</div>
+      <div class="chart-box" style="height:220px"><canvas id="chartBlank31" aria-label="31번 빈칸 위치 추이 라인차트"></canvas></div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 3. 35/39 -->
+<section id="35-39">
+  <div class="wrap">
+    <p class="sec-label">SECTION 03</p>
+    <h2 class="sec-title">흐름무관(35) · 삽입(38·39) 분리 분석</h2>
+    <p class="sec-desc">두 유형은 전혀 다른 문제다. 흐름무관은 논지 이탈 문장을 찾는 것, 삽입은 연결 논리를 맞추는 것.</p>
+
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="card">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">35번 — 흐름무관</div>
+        <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:14px">
+          <div>
+            <div class="big-num" style="color:var(--amber-dark)">④</div>
+            <div class="big-label">8회 (62%)</div>
+          </div>
+          <div>
+            <div style="font-size:28px;font-weight:700;color:var(--muted)">③</div>
+            <div style="font-size:11px;color:var(--muted)">5회 (38%)</div>
+          </div>
+        </div>
+        <div class="chart-box" style="height:120px"><canvas id="chart35" aria-label="35번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px">최근 7회(25학년도9월~26수능) 전부 ④. ①②는 13회 중 0회.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">38·39번 — 문장삽입</div>
+        <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:14px">
+          <div>
+            <div class="big-num" style="color:var(--navy)">④⑤</div>
+            <div class="big-label">38번: ④⑤ 합산 77%</div>
+          </div>
+        </div>
+        <div class="chart-box" style="height:120px"><canvas id="chart3839" aria-label="38·39번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px">39번: ④⑤ 합산 69%. ①②는 두 문항 모두 0회.</p>
+      </div>
+    </div>
+
+    <div style="margin-bottom:1rem">
+      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">35 · 38 · 39번 회차별 정답 추이</div>
+      <div class="chart-box" style="height:200px"><canvas id="chartTimeline" aria-label="35·38·39번 정답 추이 라인차트"></canvas></div>
+    </div>
+
+    <div class="strat amber">
+      <div class="strat-head">
+        <span class="badge badge-amber">35번</span>
+        <span class="strat-title">흐름무관 — ④ 먼저 읽고 논지 이탈 확인</span>
+      </div>
+      <ul>
+        <li>실전 전략: <strong>③④⑤ 문장만 먼저 확인</strong> → ①②는 13회 모두 아님(읽을 필요 없음)</li>
+        <li>논지 이탈 판단: 글 전체 주제와 무관하거나, 앞뒤 문장과 소재가 단절된 문장</li>
+        <li>최근 7회 연속 ④ → 실전에서 ④를 1순위로 확인하되, 반드시 앞뒤 문장과 비교해 확정</li>
+        <li><strong>1등급</strong>: ④ 확인 후 ③ 비교, 30초 결정. <strong>2등급</strong>: ③④⑤ 모두 확인 후 소거</li>
+      </ul>
+    </div>
+    <div class="strat red" style="margin-top:8px">
+      <div class="strat-head">
+        <span class="badge badge-red">39번 킬러</span>
+        <span class="strat-title">문장삽입(3점) — 연결어·지시어 추적</span>
+      </div>
+      <ul>
+        <li>주어진 문장의 <strong>연결어(However/Therefore/Thus)</strong>와 <strong>지시어(this/it/such)</strong>가 무엇을 받는지 확인</li>
+        <li>전략: <strong>③부터 올라오며 확인</strong>. ①②는 출제 없음(13회 0회)</li>
+        <li>삽입 후 앞뒤 문장의 논리 흐름이 매끄러운지 2문장 단위로 검증</li>
+        <li><strong>1등급</strong>: 연결어 역접/인과 전환점 찾아 45초 결정. <strong>2등급</strong>: ④⑤ 대입 비교 후 선택</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 4. Q21 -->
+<section id="q21">
+  <div class="wrap">
+    <p class="sec-label">SECTION 04</p>
+    <h2 class="sec-title">21번 함의추론 — "빈칸처럼 풀기"</h2>
+    <p class="sec-desc">밑줄 친 표현을 비워놓고 글의 논지를 먼저 파악. 선지에서 논지와 동의어를 찾는 방식이 13회 전수에서 100% 유효했다.</p>
+
+    <div class="callout">
+      <strong>검증 결과.</strong> 13회차 전수에서 논지.json(평가원 기출 역추출)과 정답 선지를 대조한 결과, 매 회차 논지 = 정답 선지의 패러프레이즈. 밑줄 표현을 직역하면 <strong>함정 선지(표면 의미)에 걸린다.</strong> 논지 파악 후 대입이 유일한 정도(正道).
+    </div>
+
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">정답 분포 (13회)</div>
+        <div class="chart-box" style="height:180px"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px">③ 최다(5회)지만 분산 → 번호 의존 전략 불가. 논지로만 풀 것.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;margin-bottom:12px">논지 유형별 패턴</div>
+        <div class="flow" style="gap:0">
+          <div class="flow-step">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">역설/이중적 의미</div><div style="font-size:12px;color:var(--muted)">밑줄 단어의 표면 의미 ≠ 글의 의도. 반의어 느낌의 선지가 정답</div></div>
+          </div>
+          <div class="flow-step">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">추상 → 구체 패러프레이즈</div><div style="font-size:12px;color:var(--muted)">밑줄이 추상적 표현. 선지에서 구체적으로 풀어 쓴 것이 정답</div></div>
+          </div>
+          <div class="flow-step">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">직역 함정 선지</div><div style="font-size:12px;color:var(--muted)">밑줄을 그대로 직역한 선지 = 매회 오답. 절대 고르지 말 것</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strat">
+      <div class="strat-head">
+        <span class="badge badge-navy">21번</span>
+        <span class="strat-title">함의추론 3단계 풀이법</span>
+      </div>
+      <ul>
+        <li><strong>Step 1</strong>: 밑줄 친 표현 무시하고 글 전체 논지를 한 문장으로 정리</li>
+        <li><strong>Step 2</strong>: 선지에서 논지와 같은 말을 다르게 쓴 것 찾기 (패러프레이즈 탐색)</li>
+        <li><strong>Step 3</strong>: 밑줄 표현에 선지를 대입해 글의 흐름이 매끄러운지 최종 확인</li>
+        <li>함정 선지 구별법: 밑줄 단어 자체를 쓰거나 직역한 선지 → 즉시 소거</li>
+        <li><strong>1등급</strong>: Step 1~2만으로 30초 이내 결정. <strong>2등급</strong>: 3단계 전체 적용 후 확정</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 5. 정답쏠림 -->
+<section id="bias">
+  <div class="wrap">
+    <p class="sec-label">SECTION 05</p>
+    <h2 class="sec-title">정답 쏠림 패턴 TOP 문항</h2>
+    <p class="sec-desc">특정 번호가 통계적으로 유의미하게 쏠린 문항. 시험장 멘탈 관리에 활용하되, 반드시 근거 확인 후 마킹.</p>
+
+    <div class="card" style="overflow:auto;margin-bottom:1.5rem">
+      <table>
+        <thead>
+          <tr>
+            <th>문항</th>
+            <th>유형</th>
+            <th>최빈 정답</th>
+            <th>빈도</th>
+            <th>비율</th>
+            <th>분포 (①~⑤)</th>
+          </tr>
+        </thead>
+        <tbody id="biasTable"></tbody>
+      </table>
+    </div>
+
+    <div class="strat green">
+      <div class="strat-head">
+        <span class="badge badge-green">40번</span>
+        <span class="strat-title">요약문 — ① 쏠림 62% (8/13)</span>
+      </div>
+      <ul>
+        <li>요약문은 글의 핵심 주장을 (A)(B) 두 단어로 축약. 선지는 주로 반의어 쌍으로 구성</li>
+        <li>글 첫 문장 + 마지막 문장 → 요약 (A)(B) 각 대입 → 의미 성립 여부 확인</li>
+        <li>① 쏠림이지만 최근 3회(26학년도)는 ②④③ → 맹신 금지. 근거 확인 필수</li>
+        <li>배점 2점. 시간 대비 효율 최고. <strong>1분 이내 해결 목표.</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 6. STRATEGY FLOW -->
+<section id="strategy">
+  <div class="wrap">
+    <p class="sec-label">SECTION 06</p>
+    <h2 class="sec-title">1등급 vs 2등급 풀이 순서</h2>
+    <p class="sec-desc">수능 영어는 70분, 45문항. 시간 배분 전략이 등급을 가른다.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:8px">
+          <span style="background:var(--navy);color:white;font-size:11px;padding:3px 10px;border-radius:12px">1등급 목표</span>
+          <span style="font-size:12px;color:var(--muted)">90점↑ · 총 오답 1~2개 허용</span>
+        </div>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-num">1</div>
+            <div class="flow-content">
+              <h4>듣기 (1~17번)</h4>
+              <p>흘리지 않고 집중. 17번 끝나기 전 답 마킹 완료.</p>
+              <span class="time">25분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">2</div>
+            <div class="flow-content">
+              <h4>18~28번 속전속결</h4>
+              <p>목적·심경·주장·요지·도표·실용문. 지문 짧음. 빠르게 처리.</p>
+              <span class="time">10분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">3</div>
+            <div class="flow-content">
+              <h4>29·30 어법·어휘</h4>
+              <p>② 최빈(어법) → ④⑤ 확인(어휘). 근거 확인 후 마킹.</p>
+              <span class="time">4분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">4</div>
+            <div class="flow-content">
+              <h4>36·37 순서배열</h4>
+              <p>(B)(C) 연결 근거 확인. 최빈 ⑤(36번)·③(37번) 먼저 검토.</p>
+              <span class="time">6분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">5</div>
+            <div class="flow-content">
+              <h4>빈칸 31~33번</h4>
+              <p>빈칸 앞뒤 집중 → 논지 역추론. 31번은 최근 앞쪽 배치.</p>
+              <span class="time">10분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">6</div>
+            <div class="flow-content">
+              <h4>35·38·39 흐름·삽입</h4>
+              <p>35: ④ 우선 확인. 39: ③부터 올라오기. 연결어 추적.</p>
+              <span class="time">8분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">7</div>
+            <div class="flow-content">
+              <h4>40~45 요약·장문</h4>
+              <p>40번 ① 우선. 장문은 지문 공유 확인 후 각 문항 독립 해결.</p>
+              <span class="time">7분</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;color:var(--amber-dark);margin-bottom:1rem;display:flex;align-items:center;gap:8px">
+          <span style="background:var(--amber);color:var(--dark);font-size:11px;padding:3px 10px;border-radius:12px">2등급 목표</span>
+          <span style="font-size:12px;color:var(--muted)">80점↑ · 오답 4~5개 허용</span>
+        </div>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">1</div>
+            <div class="flow-content">
+              <h4>듣기 + 쉬운 독해 먼저</h4>
+              <p>18~28번을 빠르게 처리해 시간 확보가 핵심.</p>
+              <span class="time">35분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">2</div>
+            <div class="flow-content">
+              <h4>35·40번 우선 해결</h4>
+              <p>35번 ③④⑤ 확인(①② 안 읽음). 40번 ① 먼저 검토.</p>
+              <span class="time">4분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">3</div>
+            <div class="flow-content">
+              <h4>38·39 삽입(2점→3점)</h4>
+              <p>38번 먼저(2점, 쉬움). 39번은 ④⑤ 대입 비교.</p>
+              <span class="time">8분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">4</div>
+            <div class="flow-content">
+              <h4>31·32 빈칸(덜 어려운 것)</h4>
+              <p>31번 전체 읽고 역추론. 오답 소거 후 남은 2개에서 결정.</p>
+              <span class="time">8분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">5</div>
+            <div class="flow-content">
+              <h4>33번(킬러) + 장문</h4>
+              <p>33번은 시간이 남을 때. 장문 41~45는 지문 1회 정독 후 4~5문항 처리.</p>
+              <span class="time">15분</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- 7. ROUND TABLE -->
+<section id="rounds">
+  <div class="wrap">
+    <p class="sec-label">SECTION 07</p>
+    <h2 class="sec-title">회차별 정답 전체 표</h2>
+    <p class="sec-desc">13회차 × 주요 28문항 정답 원본 데이터. 가로 스크롤 가능.</p>
+    <div class="card" style="overflow:auto;padding:1rem">
+      <table id="fullTable" style="min-width:900px">
+        <thead id="fullHead"></thead>
+        <tbody id="fullBody"></tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>수능 영어 트렌드 리포트 · 2022~2026학년도 평가원 기출 13회차 전수 분석</p>
+  <p style="margin-top:6px">저스틴영어학원 | justinyang7000@gmail.com</p>
+</footer>
+
+<script>
+const DATA = {
+  rounds: [
+    {id:"2022_9월모평",short:"22_9월",full:"2022학년도 9월",suneung:false},
+    {id:"2022수능",short:"22수능",full:"2022학년도 수능",suneung:true},
+    {id:"2022_6월모평",short:"23_6월",full:"2023학년도 6월",suneung:false},
+    {id:"2023수능",short:"23수능",full:"2023학년도 수능",suneung:true},
+    {id:"2023_6월모평",short:"24_6월",full:"2024학년도 6월",suneung:false},
+    {id:"2023_9월모평",short:"24_9월",full:"2024학년도 9월",suneung:false},
+    {id:"2024수능",short:"24수능",full:"2024학년도 수능",suneung:true},
+    {id:"2024_6월모평",short:"25_6월",full:"2025학년도 6월",suneung:false},
+    {id:"2025_9월",short:"25_9월",full:"2025학년도 9월",suneung:false},
+    {id:"2025수능",short:"25수능",full:"2025학년도 수능",suneung:true},
+    {id:"2026_6월",short:"26_6월",full:"2026학년도 6월",suneung:false},
+    {id:"2026_9월",short:"26_9월",full:"2026학년도 9월",suneung:false},
+    {id:"2026수능",short:"26수능",full:"2026학년도 수능",suneung:true}
+  ],
+  answers: {
+    "1": [5,5,4,3,5,4,5,3,4,2,2,1,3],
+    "2": [1,2,5,2,2,1,1,5,1,5,5,2,2],
+    "3": [2,1,3,3,1,5,4,3,5,1,5,3,1],
+    "4": [3,4,5,4,5,4,3,4,5,3,4,5,5],
+    "5": [1,2,3,2,1,3,2,4,1,1,4,4,1],
+    "6": [4,4,2,3,3,3,3,3,1,4,3,4,4],
+    "7": [3,1,1,5,1,4,4,2,5,3,1,1,1],
+    "8": [5,4,2,3,4,5,3,5,3,4,4,4,5],
+    "9": [4,3,4,2,2,5,4,2,5,5,4,5,4],
+    "10":[4,4,4,1,3,2,2,2,3,2,1,4,4],
+    "11":[5,1,1,2,5,2,5,5,2,2,5,2,1],
+    "12":[1,2,5,1,2,4,1,2,1,1,3,1,2],
+    "13":[2,3,1,4,3,2,5,2,4,5,3,5,2],
+    "14":[1,5,2,4,1,1,1,1,2,1,1,3,3],
+    "15":[5,5,1,3,5,1,1,3,3,2,3,5,3],
+    "16":[3,3,2,1,4,2,2,1,1,3,2,1,1],
+    "17":[4,5,4,5,2,3,3,4,3,4,4,3,5],
+    "18":[4,2,1,2,3,5,2,3,1,3,1,3,5],
+    "19":[3,1,1,4,1,4,3,1,3,4,3,3,4],
+    "20":[1,3,4,5,4,1,4,5,4,3,1,4,2],
+    "21":[2,2,3,1,3,1,3,2,3,3,3,3,2],
+    "22":[1,5,5,5,5,5,2,4,4,4,2,3,4],
+    "23":[5,1,4,3,4,1,2,2,1,2,1,3,4],
+    "24":[3,5,1,5,1,2,5,1,5,5,2,4,3],
+    "25":[3,4,3,3,4,5,4,2,4,5,3,4,4],
+    "26":[5,3,4,4,4,3,3,5,5,4,2,3,1],
+    "27":[2,4,3,1,3,5,3,5,1,3,1,3,3],
+    "28":[4,2,4,3,4,3,1,4,2,1,1,4,5],
+    "29":[3,2,3,2,2,2,2,2,2,3,2,2,4],
+    "30":[4,5,4,4,4,4,5,5,4,4,5,4,3],
+    "31":[3,1,5,2,2,2,2,3,2,5,5,2,1],
+    "32":[2,5,3,5,1,1,2,4,2,3,4,2,5],
+    "33":[4,1,2,5,1,1,1,4,2,1,1,5,4],
+    "34":[5,3,1,4,4,1,2,3,3,2,3,2,5],
+    "35":[3,4,3,3,3,4,3,4,4,4,4,4,4],
+    "36":[5,2,5,2,4,5,4,1,5,5,4,4,4],
+    "37":[2,3,2,3,3,2,4,3,3,5,3,3,5],
+    "38":[4,5,4,5,5,2,3,4,5,4,4,3,5],
+    "39":[5,4,3,4,2,5,4,5,4,4,5,2,3],
+    "40":[1,1,1,1,2,1,1,2,1,1,2,4,3],
+    "41":[2,2,3,1,3,3,5,3,1,4,1,4,2],
+    "42":[5,5,2,2,2,3,1,5,3,5,3,2,4],
+    "43":[4,3,2,5,2,5,1,5,4,4,3,3,2],
+    "44":[1,1,5,4,5,2,3,2,1,3,2,1,3],
+    "45":[4,3,2,4,2,3,3,5,4,4,5,1,2]
+  },
+  blank31: [
+    {label:"22_9월",pos:0,ctype:"word"},
+    {label:"22수능",pos:83,ctype:"word"},
+    {label:"23_6월",pos:null,ctype:"word"},
+    {label:"23수능",pos:80,ctype:"word"},
+    {label:"24_6월",pos:null,ctype:"word"},
+    {label:"24_9월",pos:null,ctype:"word"},
+    {label:"24수능",pos:71,ctype:"phrase"},
+    {label:"25_6월",pos:null,ctype:"word"},
+    {label:"25_9월",pos:11,ctype:"word"},
+    {label:"25수능",pos:0,ctype:"phrase"},
+    {label:"26_6월",pos:0,ctype:"word"},
+    {label:"26_9월",pos:11,ctype:"phrase"},
+    {label:"26수능",pos:14,ctype:"word"}
+  ]
+};
+
+const CIRCLE = ['①','②','③','④','⑤'];
+const CELL_COLORS = ['#EDF5FA','#9abfd8','#4a8ab5','#FFA723','#00457F'];
+const CELL_TEXT = ['#00457F','#00457F','#fff','#1a1d29','#fff'];
+const QNAMES = {
+  1:'목적',2:'대화목적',3:'관계',4:'심경변화',5:'주장',6:'주제',7:'이유',8:'언급',9:'일치',10:'일치',
+  11:'도표',12:'일치',13:'대화일치',14:'긴대화',15:'긴대화',16:'짧은대화',17:'짧은대화',
+  18:'목적',19:'심경',20:'주장',21:'함의',22:'요지',23:'주제',
+  24:'제목',25:'도표',26:'내용일치',27:'실용문',28:'연결어',
+  29:'어법',30:'어휘',31:'빈칸',32:'빈칸',33:'빈칸',
+  34:'흐름무관',35:'흐름무관',36:'순서',37:'순서',
+  38:'삽입2점',39:'삽입킬러',40:'요약',
+  41:'장문이해',42:'장문목적',43:'장문순서',44:'장문빈칸',45:'장문일치'
+};
+
+/* LISTENING CHARTS */
+(function(){
+  // 분포: 1~17번 전체 221개 정답 분포
+  const dist=[0,0,0,0,0];
+  for(let q=1;q<=17;q++){
+    (DATA.answers[String(q)]||[]).forEach(a=>{ if(a>=1&&a<=5) dist[a-1]++; });
+  }
+  new Chart(document.getElementById('chartListeningDist'),{
+    type:'bar',
+    data:{labels:['①','②','③','④','⑤'],datasets:[{data:dist,backgroundColor:CELL_COLORS,borderWidth:0,borderRadius:4}]},
+    options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{y:{grid:{color:'rgba(0,0,0,0.04)'}},x:{grid:{display:false}}}}
+  });
+
+  // 문항별 최빈 정답 그리드
+  const biasGrid=document.getElementById('listeningBias');
+  for(let q=1;q<=17;q++){
+    const vals=DATA.answers[String(q)]||[];
+    const cnt=[0,0,0,0,0];
+    vals.forEach(a=>{ if(a>=1&&a<=5) cnt[a-1]++; });
+    const mode=cnt.indexOf(Math.max(...cnt));
+    const pct=Math.round(cnt[mode]/vals.filter(v=>v).length*100);
+    const div=document.createElement('div');
+    div.style.cssText='background:var(--white);border:1px solid var(--border);border-radius:6px;padding:6px 8px;text-align:center';
+    div.innerHTML=`<div style="font-size:11px;color:var(--muted)">${q}번</div><div style="font-size:18px;font-weight:800;color:${CELL_COLORS[mode]};-webkit-text-stroke:${mode===0?'1px #9abfd8':'0'}">${CIRCLE[mode]}</div><div style="font-size:10px;color:var(--muted)">${pct}%</div>`;
+    biasGrid.appendChild(div);
+  }
+
+  // 추이: 1·11·14번
+  new Chart(document.getElementById('chartListeningTrend'),{
+    type:'line',
+    data:{
+      labels:DATA.rounds.map(r=>r.short),
+      datasets:[
+        {label:'1번(목적)',data:DATA.answers['1'],borderColor:'#FFA723',backgroundColor:'rgba(255,167,35,0.05)',borderWidth:2,tension:.3,pointRadius:4},
+        {label:'11번(도표)',data:DATA.answers['11'],borderColor:'#00457F',backgroundColor:'rgba(0,69,127,0.05)',borderWidth:2,tension:.3,pointRadius:3,borderDash:[4,2]},
+        {label:'14번(긴대화)',data:DATA.answers['14'],borderColor:'#5a6474',backgroundColor:'transparent',borderWidth:2,tension:.3,pointRadius:3,borderDash:[2,2]}
+      ]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{legend:{display:true,position:'top',labels:{boxWidth:10,font:{size:11}}}},
+      scales:{
+        y:{min:1,max:5,ticks:{stepSize:1,callback:v=>CIRCLE[v-1]||v},grid:{color:'rgba(0,0,0,0.04)'}},
+        x:{ticks:{font:{size:10}},grid:{display:false}}
+      }
+    }
+  });
+})();
+
+/* HEATMAP */
+(function(){
+  const g = document.getElementById('heatmapGrid');
+  const rounds = DATA.rounds;
+  // header row
+  const blank = document.createElement('div');
+  g.appendChild(blank);
+  rounds.forEach(r=>{
+    const d = document.createElement('div');
+    d.className='hm-header';
+    d.textContent=r.short;
+    d.style.fontWeight = r.suneung ? '800':'400';
+    d.style.color = r.suneung ? 'var(--navy)':'var(--muted)';
+    g.appendChild(d);
+  });
+  // rows
+  for(let qn=1;qn<=45;qn++){
+    // 듣기/독해 구분선
+    if(qn===18){
+      const sep = document.createElement('div');
+      sep.style.cssText='grid-column:1/-1;height:6px;background:var(--bg);';
+      g.appendChild(sep);
+    }
+    const qLabel = document.createElement('div');
+    qLabel.className='hm-qn';
+    const isDutkgi = qn<=17;
+    qLabel.innerHTML=`<span style="color:${isDutkgi?'var(--amber-dark)':'var(--dark)'};font-size:11px">${qn}</span><span style="color:var(--muted);font-size:10px;margin-left:3px">${(QNAMES[qn]||'').slice(0,3)}</span>`;
+    g.appendChild(qLabel);
+    const answers = DATA.answers[String(qn)] || [];
+    answers.forEach((ans,i)=>{
+      const c = document.createElement('div');
+      c.className='hm-cell';
+      if(ans){
+        c.style.background = CELL_COLORS[ans-1];
+        c.style.color = CELL_TEXT[ans-1];
+        c.textContent = CIRCLE[ans-1];
+        if(rounds[i].suneung){
+          c.style.outline='2px solid var(--dark)';
+          c.style.outlineOffset='-2px';
+        }
+      } else {
+        c.style.background='#f0f0f0';
+      }
+      g.appendChild(c);
+    });
+  }
+})();
+
+/* CHART 35 */
+new Chart(document.getElementById('chart35'),{
+  type:'bar',
+  data:{
+    labels:['①','②','③','④','⑤'],
+    datasets:[{
+      data:[0,0,5,8,0],
+      backgroundColor:['#EDF5FA','#9abfd8','#4a8ab5','#FFA723','#00457F'],
+      borderWidth:0,borderRadius:4
+    }]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{y:{ticks:{stepSize:1},grid:{color:'rgba(0,0,0,0.04)'}},x:{grid:{display:false}}}
+  }
+});
+
+/* CHART 38/39 */
+new Chart(document.getElementById('chart3839'),{
+  type:'bar',
+  data:{
+    labels:['①','②','③','④','⑤'],
+    datasets:[
+      {label:'38번',data:[0,1,2,5,5],backgroundColor:'rgba(0,69,127,0.7)',borderWidth:0,borderRadius:3},
+      {label:'39번',data:[0,2,2,5,4],backgroundColor:'rgba(255,167,35,0.8)',borderWidth:0,borderRadius:3}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:true,position:'top',labels:{boxWidth:10,font:{size:11}}}},
+    scales:{y:{ticks:{stepSize:1},grid:{color:'rgba(0,0,0,0.04)'}},x:{grid:{display:false}}}
+  }
+});
+
+/* CHART TIMELINE 35/38/39 */
+new Chart(document.getElementById('chartTimeline'),{
+  type:'line',
+  data:{
+    labels:DATA.rounds.map(r=>r.short),
+    datasets:[
+      {label:'35번(무관)',data:DATA.answers['35'],borderColor:'#FFA723',backgroundColor:'rgba(255,167,35,0.05)',borderWidth:2,tension:.3,pointRadius:4,pointBackgroundColor:'#FFA723'},
+      {label:'38번(삽입)',data:DATA.answers['38'],borderColor:'#00457F',backgroundColor:'rgba(0,69,127,0.05)',borderWidth:2,tension:.3,pointRadius:3,borderDash:[4,2]},
+      {label:'39번(킬러)',data:DATA.answers['39'],borderColor:'#1a1d29',backgroundColor:'transparent',borderWidth:2,tension:.3,pointRadius:3,borderDash:[2,2]}
+    ]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:true,position:'top',labels:{boxWidth:10,font:{size:11}}}},
+    scales:{
+      y:{min:1,max:5,ticks:{stepSize:1,callback:v=>CIRCLE[v-1]||v},grid:{color:'rgba(0,0,0,0.04)'}},
+      x:{ticks:{font:{size:10}},grid:{display:false}}
+    }
+  }
+});
+
+/* CHART 21 */
+new Chart(document.getElementById('chart21'),{
+  type:'bar',
+  data:{
+    labels:['①','②','③','④','⑤'],
+    datasets:[{
+      data:[2,4,5,1,1],
+      backgroundColor:['#EDF5FA','#9abfd8','#4a8ab5','#FFA723','#00457F'],
+      borderWidth:0,borderRadius:4
+    }]
+  },
+  options:{
+    responsive:true,maintainAspectRatio:false,
+    plugins:{legend:{display:false}},
+    scales:{y:{ticks:{stepSize:1},grid:{color:'rgba(0,0,0,0.04)'}},x:{grid:{display:false}}}
+  }
+});
+
+/* CHART BLANK31 */
+(function(){
+  const items = DATA.blank31.filter(d=>d.pos!==null);
+  new Chart(document.getElementById('chartBlank31'),{
+    type:'line',
+    data:{
+      labels:items.map(d=>d.label),
+      datasets:[{
+        label:'빈칸 위치(%)',
+        data:items.map(d=>d.pos),
+        borderColor:'#00457F',
+        backgroundColor:'rgba(0,69,127,0.06)',
+        fill:true,borderWidth:2.5,tension:.3,
+        pointBackgroundColor:items.map(d=>d.pos<=20?'#FFA723':'#00457F'),
+        pointRadius:5
+      }]
+    },
+    options:{
+      responsive:true,maintainAspectRatio:false,
+      plugins:{
+        legend:{display:false},
+        tooltip:{callbacks:{label:ctx=>`${ctx.parsed.y}% 지점 (${ctx.parsed.y<=20?'앞쪽':'뒤쪽'})`}}
+      },
+      scales:{
+        y:{min:0,max:100,ticks:{callback:v=>v+'%'},grid:{color:'rgba(0,0,0,0.04)'}},
+        x:{ticks:{font:{size:11}},grid:{display:false}}
+      }
+    }
+  });
+})();
+
+/* BIAS TABLE */
+(function(){
+  const biasData = [
+    {qn:22,name:'요지',dist:[8,2,2,0,1],mode:1},
+    {qn:40,name:'요약',dist:[8,3,1,1,0],mode:1},
+    {qn:35,name:'흐름무관',dist:[0,0,5,8,0],mode:4},
+    {qn:19,name:'심경',dist:[6,2,3,0,2],mode:1},
+    {qn:29,name:'어법',dist:[0,7,4,1,1],mode:2},
+    {qn:33,name:'빈칸킬러',dist:[6,2,0,3,2],mode:1},
+    {qn:39,name:'삽입킬러',dist:[0,2,2,5,4],mode:4},
+    {qn:25,name:'도표',dist:[0,0,3,7,3],mode:4},
+    {qn:37,name:'순서',dist:[0,3,6,2,2],mode:3},
+  ];
+  const tb = document.getElementById('biasTable');
+  biasData.forEach(row=>{
+    const total = row.dist.reduce((a,b)=>a+b,0);
+    const pct = Math.round(row.dist[row.mode-1]/total*100);
+    const distStr = row.dist.map((v,i)=>{
+      const pill = `<span class="ans-pill ${v===row.dist[row.mode-1]?'ans-high':'ans-low'}">${CIRCLE[i]}</span>`;
+      return `<span style="display:inline-flex;align-items:center;gap:3px;margin-right:4px">${pill}<span style="font-size:11px;color:var(--muted)">${v}</span></span>`;
+    }).join('');
+    const tr = document.createElement('tr');
+    tr.innerHTML=`
+      <td style="font-weight:700">${row.qn}번</td>
+      <td style="color:var(--muted)">${row.name}</td>
+      <td><span class="ans-pill ans-high">${CIRCLE[row.mode-1]}</span></td>
+      <td>${row.dist[row.mode-1]}/${total}회</td>
+      <td style="font-weight:700;color:var(--navy)">${pct}%</td>
+      <td>${distStr}</td>
+    `;
+    tb.appendChild(tr);
+  });
+})();
+
+/* FULL TABLE */
+(function(){
+  const head = document.getElementById('fullHead');
+  const body = document.getElementById('fullBody');
+  const qns = [18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,35,36,37,38,39,40,41,42,43,44,45];
+  const htr = document.createElement('tr');
+  htr.innerHTML = '<th>회차</th>' + qns.map(q=>`<th>${q}</th>`).join('');
+  head.appendChild(htr);
+  DATA.rounds.forEach((r,i)=>{
+    const tr = document.createElement('tr');
+    const label = `<td style="font-weight:${r.suneung?'700':'400'};white-space:nowrap;color:${r.suneung?'var(--navy)':'var(--text)'}">${r.short}</td>`;
+    const cells = qns.map(qn=>{
+      const ans = (DATA.answers[String(qn)]||[])[i];
+      if(!ans) return '<td>-</td>';
+      return `<td><span class="ans-pill ${ans<=2?'ans-mid':ans>=4?'ans-high':'ans-low'}">${CIRCLE[ans-1]}</span></td>`;
+    }).join('');
+    tr.innerHTML = label + cells;
+    body.appendChild(tr);
+  });
+})();
+</script>
+</body>
+</html>

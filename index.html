@@ -196,6 +196,10 @@ section{padding:3.5rem 0 2rem}
 
 /* CHART WRAP */
 .chart-box{position:relative;width:100%}
+.chart-box-lg{height:220px}
+.chart-box-md{height:200px}
+.chart-box-sm2{height:180px}
+.chart-box-xs{height:120px}
 
 /* TIMELINE ROW */
 .timeline-row{
@@ -293,19 +297,48 @@ footer{
   margin-top:4rem;
 }
 
+/* 정답률 카드 그리드 (클래스 기반) */
+.rate-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(160px,1fr));
+  gap:10px;
+}
+.rate-grid-sm{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(130px,1fr));
+  gap:8px;
+}
+
 /* MOBILE */
 @media(max-width:640px){
   .grid-2,.grid-3{grid-template-columns:1fr}
+  .grid-auto{grid-template-columns:1fr}
+  .rate-grid{grid-template-columns:repeat(2,1fr)}
+  .rate-grid-sm{grid-template-columns:repeat(2,1fr)}
   .hero{padding:2.5rem 1.25rem 2.5rem}
   section{padding:2.5rem 0 1rem}
-  .wrap{padding:0 1.25rem}
-  nav{padding:0 1rem}
+  .wrap{padding:0 1rem}
+  nav{padding:0 0.75rem}
+  .nav-inner{gap:0.85rem}
   .strat ul{font-size:13px}
-  table{font-size:13px}
-  th,td{padding:8px 10px}
+  table{font-size:12px}
+  th,td{padding:7px 8px}
+  .big-num{font-size:clamp(32px,10vw,52px)}
+  .chart-box-lg{height:170px}
+  .chart-box-md{height:160px}
+  .chart-box-sm2{height:150px}
+  #listeningBias{grid-template-columns:repeat(3,1fr) !important}
+  .hero h1{font-size:clamp(22px,7vw,36px)}
+  .hero-stats{grid-template-columns:repeat(2,1fr)}
+  .strat{padding:1rem 1.1rem}
+  .strat-title{font-size:14px}
+  .callout{font-size:13px}
+  .sec-title{font-size:clamp(18px,5vw,24px)}
 }
 @media(max-width:400px){
   .hero-stats{grid-template-columns:1fr 1fr}
+  .rate-grid,.rate-grid-sm{grid-template-columns:1fr 1fr}
+  .wrap{padding:0 0.75rem}
 }
 </style>
 </head>
@@ -350,7 +383,7 @@ footer{
     <div class="grid-2" style="margin-bottom:1.5rem">
       <div class="card card-sm">
         <div style="font-size:12px;color:var(--muted);margin-bottom:10px">1~17번 전체 정답 분포 (13회 × 17문항 = 221개)</div>
-        <div style="position:relative;width:100%;height:180px"><canvas id="chartListeningDist" role="img" aria-label="듣기 1-17번 정답 분포"></canvas></div>
+        <div class="chart-box chart-box-sm2" style="position:relative;width:100%"><canvas id="chartListeningDist" role="img" aria-label="듣기 1-17번 정답 분포"></canvas></div>
         <p style="font-size:12px;color:var(--muted);margin-top:8px">① 최다(46회, 21%). 듣기는 독해보다 ① 쏠림 강함.</p>
       </div>
       <div class="card card-sm">
@@ -374,7 +407,7 @@ footer{
 
     <div style="margin-top:1.5rem">
       <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">회차별 듣기 정답 추이 (1·11·14번)</div>
-      <div style="position:relative;width:100%;height:200px"><canvas id="chartListeningTrend" role="img" aria-label="듣기 주요 문항 정답 추이"></canvas></div>
+      <div class="chart-box chart-box-md" style="position:relative;width:100%"><canvas id="chartListeningTrend" role="img" aria-label="듣기 주요 문항 정답 추이"></canvas></div>
     </div>
   </div>
 </section>
@@ -419,7 +452,7 @@ footer{
     <!-- 오답률 실측 데이터 박스 -->
     <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem">
       <div style="font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em;margin-bottom:12px">실측 정답률 (메가스터디 기준)</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px">
+      <div class="rate-grid">
         <div style="padding:10px 12px;background:var(--bg);border-radius:8px;border:1px solid var(--border)">
           <div style="font-size:11px;color:var(--muted)">25수능 32번 빈칸</div>
           <div style="font-size:22px;font-weight:800;color:#c0392b">23%</div>
@@ -496,7 +529,7 @@ footer{
 
     <div style="margin-top:2rem;margin-bottom:1rem">
       <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">31번 빈칸 위치 추이 — 지문 내 비율(%)</div>
-      <div class="chart-box" style="height:220px"><canvas id="chartBlank31" aria-label="31번 빈칸 위치 추이 라인차트"></canvas></div>
+      <div class="chart-box chart-box-lg"><canvas id="chartBlank31" aria-label="31번 빈칸 위치 추이 라인차트"></canvas></div>
       <div style="margin-top:12px;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:6px;font-size:12.5px;line-height:1.85;color:var(--text)">
         <div style="margin-bottom:6px"><strong style="color:var(--navy)">그래프 읽는 법</strong> — 지문 전체 길이를 100%로 봤을 때 빈칸이 몇 번째 위치에 있는지.</div>
         <div style="color:var(--muted);margin-bottom:10px">0% = 첫 문장이 빈칸 &nbsp;/&nbsp; 50% = 중간 &nbsp;/&nbsp; 80%+ = 후반부 빈칸</div>
@@ -529,7 +562,7 @@ footer{
             <div style="font-size:11px;color:var(--muted)">5회 (38%)</div>
           </div>
         </div>
-        <div class="chart-box" style="height:120px"><canvas id="chart35" aria-label="35번 정답 분포 바차트"></canvas></div>
+        <div class="chart-box chart-box-xs"><canvas id="chart35" aria-label="35번 정답 분포 바차트"></canvas></div>
         <p style="font-size:12px;color:var(--muted);margin-top:10px">최근 7회(25학년도9월~26수능) 전부 ④. ①②는 13회 중 0회.</p>
       </div>
       <div class="card">
@@ -540,14 +573,14 @@ footer{
             <div class="big-label">38번: ④⑤ 합산 77%</div>
           </div>
         </div>
-        <div class="chart-box" style="height:120px"><canvas id="chart3839" aria-label="38·39번 정답 분포 바차트"></canvas></div>
+        <div class="chart-box chart-box-xs"><canvas id="chart3839" aria-label="38·39번 정답 분포 바차트"></canvas></div>
         <p style="font-size:12px;color:var(--muted);margin-top:10px">39번: ④⑤ 합산 69%. ①②는 두 문항 모두 0회.</p>
       </div>
     </div>
 
     <div style="margin-bottom:1rem">
       <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">35 · 38 · 39번 회차별 정답 추이</div>
-      <div class="chart-box" style="height:200px"><canvas id="chartTimeline" aria-label="35·38·39번 정답 추이 라인차트"></canvas></div>
+      <div class="chart-box chart-box-md"><canvas id="chartTimeline" aria-label="35·38·39번 정답 추이 라인차트"></canvas></div>
     </div>
 
     <div class="strat amber">
@@ -592,7 +625,7 @@ footer{
     <!-- 난이도 실측 -->
     <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem">
       <div style="font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em;margin-bottom:12px">2025수능 간접쓰기 정답률 실측 (오르비 집계)</div>
-      <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:8px">
+      <div class="rate-grid-sm">
         <div style="padding:10px 12px;background:var(--bg);border-radius:8px;border:1px solid var(--border)">
           <div style="font-size:11px;color:var(--muted)">37번 글의 순서</div>
           <div style="font-size:22px;font-weight:800;color:#c0392b">34%</div>
@@ -669,7 +702,7 @@ footer{
     <div class="grid-2" style="margin-bottom:1.5rem">
       <div class="card">
         <div style="font-size:12px;color:var(--muted);margin-bottom:10px">정답 분포 (13회)</div>
-        <div class="chart-box" style="height:180px"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
+        <div class="chart-box chart-box-sm2"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
         <p style="font-size:12px;color:var(--muted);margin-top:8px">③ 최다(5회)지만 분산 → 번호 의존 전략 불가. 논지로만 풀 것.</p>
       </div>
       <div class="card">

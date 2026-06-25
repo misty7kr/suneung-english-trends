@@ -352,11 +352,11 @@ footer{
     <a href="#listening">1·듣기</a>
     <a href="#speed-zone">2·고속처리</a>
     <a href="#grammar-vocab">3·어법어휘</a>
-    <a href="#35-39">4·흐름삽입</a>
-    <a href="#indirect-writing">5·간접쓰기</a>
-    <a href="#q21">6·함의</a>
-    <a href="#long-passage">7·장문</a>
-    <a href="#killer">8·킬러빈칸</a>
+    <a href="#q21">4·함의</a>
+    <a href="#long-passage">5·요약장문</a>
+    <a href="#35-39">6·삽입흐름</a>
+    <a href="#indirect-writing">7·순서</a>
+    <a href="#killer">8·빈칸</a>
     <a href="#bias">참고·쏠림</a>
     <a href="#heatmap">참고·히트맵</a>
   </div>
@@ -506,7 +506,7 @@ footer{
 
 <section id="listening">
   <div class="wrap">
-    <p class="sec-label">STEP 1 · 듣기</p>
+    <p class="sec-label">STEP 1 · 듣기 1~17</p>
     <h2 class="sec-title">듣기 1~17번 정답 패턴</h2>
     <p class="sec-desc">듣기도 정답 쏠림이 존재한다. 시험장에서 헷갈릴 때 통계 근거로 활용 가능.</p>
 
@@ -546,7 +546,7 @@ footer{
 
 <section id="speed-zone">
   <div class="wrap">
-    <p class="sec-label">STEP 2 · 고속처리</p>
+    <p class="sec-label">STEP 2 · 고속처리 18~28</p>
     <h2 class="sec-title">고속처리 구간 — 22~28번 유형별 접근법</h2>
     <p class="sec-desc">22~28번은 킬러 전 고속처리 구간입니다. 유형별 접근 원리를 정확히 알면 문항당 1분 이내 처리가 가능합니다. 아래는 13회차 실측 데이터 기반 접근법입니다.</p>
 
@@ -701,7 +701,7 @@ footer{
 
 <section id="grammar-vocab">
   <div class="wrap">
-    <p class="sec-label">STEP 3 · 어법·어휘</p>
+    <p class="sec-label">STEP 3 · 어법·어휘 29·30</p>
     <h2 class="sec-title">어법(29번) · 어휘(30번) — 정답 쏠림의 왕</h2>
     <p class="sec-desc">매년 빠지지 않는 어법·어휘 2문항은 정답 번호 쏠림이 가장 극단적인 영역입니다. 실측 13회차 데이터를 확인하세요.</p>
 
@@ -767,9 +767,164 @@ footer{
 
 <div class="divider"></div>
 
+<section id="q21">
+  <div class="wrap">
+    <p class="sec-label">STEP 4 · 함의추론 21</p>
+    <h2 class="sec-title">21번 함의추론 — "빈칸처럼 풀기"</h2>
+    <p class="sec-desc">밑줄 친 표현을 비워놓고 글의 논지를 먼저 파악. 선지에서 논지와 동의어를 찾는 방식이 13회 전수에서 100% 유효했다.</p>
+
+    <div class="callout">
+      <strong>핵심 원리.</strong> 함의추론의 정답은 거의 항상 <strong>글의 논지를 패러프레이즈한 선지</strong>다. 밑줄 표현을 직역하면 <strong>함정 선지(표면 의미)에 걸린다.</strong> 논지 파악 후 대입이 유일한 정도(正道).
+    </div>
+
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">정답 분포 (13회)</div>
+        <div class="chart-box chart-box-sm2"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px">③ 최다(5회)지만 분산 → 번호 의존 전략 불가. 논지로만 풀 것.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;margin-bottom:12px">논지 유형별 패턴</div>
+        <div class="flow" style="gap:0">
+          <div class="flow-step">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">역설/이중적 의미</div><div style="font-size:12px;color:var(--muted)">밑줄 단어의 표면 의미 ≠ 글의 의도. 반의어 느낌의 선지가 정답</div></div>
+          </div>
+          <div class="flow-step">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">추상 → 구체 패러프레이즈</div><div style="font-size:12px;color:var(--muted)">밑줄이 추상적 표현. 선지에서 구체적으로 풀어 쓴 것이 정답</div></div>
+          </div>
+          <div class="flow-step">
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">직역 함정 선지</div><div style="font-size:12px;color:var(--muted)">밑줄을 그대로 직역한 선지 = 매회 오답. 절대 고르지 말 것</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="strat">
+      <div class="strat-head">
+        <span class="badge badge-navy">21번</span>
+        <span class="strat-title">함의추론 3단계 풀이법</span>
+      </div>
+      <ul>
+        <li><strong>Step 1</strong>: 밑줄 친 표현 무시하고 글 전체 논지를 한 문장으로 정리</li>
+        <li><strong>Step 2</strong>: 선지에서 논지와 같은 말을 다르게 쓴 것 찾기 (패러프레이즈 탐색)</li>
+        <li><strong>Step 3</strong>: 밑줄 표현에 선지를 대입해 글의 흐름이 매끄러운지 최종 확인</li>
+        <li>함정 선지 구별법: 밑줄 단어 자체를 쓰거나 직역한 선지 → 즉시 소거</li>
+        <li><strong>1등급</strong>: Step 1~2만으로 30초 이내 결정. <strong>2등급</strong>: 3단계 전체 적용 후 확정</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="long-passage">
+  <div class="wrap">
+    <p class="sec-label">STEP 5 · 요약·장문 40~45</p>
+    <h2 class="sec-title">요약문(40) · 장문독해(41~45)</h2>
+    <p class="sec-desc">40번은 한 단락 요약(빈칸 A·B) 문항이고, 41~45번이 장문입니다 — 41·42번이 한 지문 세트, 43·44·45번이 한 지문 세트. 70분 후반이라 시간 압박이 크지만 정답 패턴으로 시간을 아낄 수 있습니다.</p>
+
+    <!-- 40 요약 (장문 아님) -->
+    <div class="card" style="padding:28px;margin-bottom:20px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+        <span style="background:#00457F;color:#fff;font-weight:900;font-size:15px;padding:4px 14px;border-radius:20px">40번</span>
+        <span style="font-weight:700;font-size:17px;color:#1e293b">요약문 완성 — 빈칸 (A)(B) <span style="color:#64748b;font-weight:500">(장문 아님)</span></span>
+        <span style="margin-left:auto;background:#fef3c7;color:#92400e;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px">①이 62%</span>
+      </div>
+      <div class="grid-2" style="gap:16px">
+        <div>
+          <div class="chart-box chart-box-xs"><canvas id="chart40" aria-label="40번 정답 분포"></canvas></div>
+          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center"><strong>①: 8회(62%)</strong> | ②: 3회 | ③: 1회 | ④: 1회 | ⑤: 0회</p>
+        </div>
+        <div>
+          <div class="strat" style="height:100%">
+            <div class="strat-title">접근법</div>
+            <ul style="margin-left:18px;line-height:2;font-size:15px">
+              <li>한 단락(약 120단어)을 한 문장으로 요약 → (A)(B) 두 빈칸에 들어갈 말 선택</li>
+              <li>요지/주제를 패러프레이즈한 선지가 정답 — 본문 단어 그대로 쓴 선지는 함정</li>
+              <li>⑤는 역대 0회 · ①이 62% — 단, 반드시 요지 확인 후 마킹</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 41-42 세트 -->
+    <div class="card" style="padding:28px;margin-bottom:20px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+        <span style="background:#00457F;color:#fff;font-weight:900;font-size:15px;padding:4px 14px;border-radius:20px">41·42번</span>
+        <span style="font-weight:700;font-size:17px;color:#1e293b">장문 1지문 2문항 (제목 + 어휘)</span>
+        <span style="margin-left:auto;background:#fef3c7;color:#92400e;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px">42번 ⑤가 46%</span>
+      </div>
+      <div class="grid-2" style="gap:16px;margin-bottom:16px">
+        <div>
+          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">41번 정답 분포 (제목)</p>
+          <div class="chart-box chart-box-xs"><canvas id="chart41" aria-label="41번 정답 분포"></canvas></div>
+          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 5회 | <strong>②: 5회</strong> | ③: 3회 | ④: 0회 | ⑤: 0회</p>
+        </div>
+        <div>
+          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">42번 정답 분포 (어휘)</p>
+          <div class="chart-box chart-box-xs"><canvas id="chart42" aria-label="42번 정답 분포"></canvas></div>
+          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 0회 | ②: 1회 | ③: 4회 | ④: 2회 | <strong>⑤: 6회(46%)</strong></p>
+        </div>
+      </div>
+      <div class="strat">
+        <div class="strat-title">접근법</div>
+        <ul style="margin-left:18px;line-height:2;font-size:15px">
+          <li>긴 지문이지만 두 문항이 같은 지문 → 한 번 읽고 두 문제 동시 해결</li>
+          <li>41번(제목)은 ①②에 집중(10회 77%), ④⑤ 0회. 42번(어휘)은 ⑤(46%)·③ 집중, ① 0회</li>
+          <li>42번은 문맥상 부적절한 낱말 찾기 — 밑줄 단어를 앞뒤 논지와 대조</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 43-45 세트 -->
+    <div class="card" style="padding:28px">
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
+        <span style="background:#00457F;color:#fff;font-weight:900;font-size:15px;padding:4px 14px;border-radius:20px">43·44·45번</span>
+        <span style="font-weight:700;font-size:17px;color:#1e293b">장문 1지문 3문항 (순서 · 지칭 · 일치)</span>
+        <span style="margin-left:auto;background:#fee2e2;color:#991b1b;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px">시간 부족 위험</span>
+      </div>
+      <div class="grid-2" style="gap:16px;margin-bottom:16px">
+        <div>
+          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">43번 (순서)</p>
+          <div class="chart-box chart-box-xs"><canvas id="chart43" aria-label="43번 정답 분포"></canvas></div>
+          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 0회 | ②: 3회 | ③: 4회 | ④: 1회 | <strong>⑤: 5회(38%)</strong></p>
+        </div>
+        <div>
+          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">44번 (지칭)</p>
+          <div class="chart-box chart-box-xs"><canvas id="chart44" aria-label="44번 정답 분포"></canvas></div>
+          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 1회 | ②: 3회 | <strong>③: 5회(38%)</strong> | ④: 1회 | ⑤: 3회</p>
+        </div>
+      </div>
+      <div class="grid-2" style="gap:16px;margin-bottom:16px">
+        <div>
+          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">45번 (내용일치)</p>
+          <div class="chart-box chart-box-xs"><canvas id="chart45" aria-label="45번 정답 분포"></canvas></div>
+          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 0회 | ②: 3회 | ③: 3회 | ④: 3회 | <strong>⑤: 4회</strong></p>
+        </div>
+        <div></div>
+      </div>
+      <div class="strat">
+        <div class="strat-title">접근법</div>
+        <ul style="margin-left:18px;line-height:2;font-size:15px">
+          <li>한 지문(이야기체)에 순서(43)·지칭(44)·일치(45) 3문항 — 한 번에 읽고 푼다</li>
+          <li>43 순서는 ⑤(38%) 빈도 높음, 44 지칭은 ③(38%) 집중. 단 ①은 43·45 모두 0회</li>
+          <li>등장인물 대명사(he/she/they) 추적이 44번 지칭의 핵심</li>
+          <li>시간이 부족하면 비교적 평이한 이 세트를 먼저 확보하고 킬러로 복귀</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <section id="35-39">
   <div class="wrap">
-    <p class="sec-label">STEP 4 · 흐름·삽입</p>
+    <p class="sec-label">STEP 6 · 삽입·흐름 (1등급 빈순삽)</p>
     <h2 class="sec-title">흐름무관(35) · 삽입(38·39) 분리 분석</h2>
     <p class="sec-desc">두 유형은 전혀 다른 문제다. 흐름무관은 논지 이탈 문장을 찾는 것, 삽입은 연결 논리를 맞추는 것.</p>
 
@@ -841,7 +996,7 @@ footer{
 
 <section id="indirect-writing">
   <div class="wrap">
-    <p class="sec-label">STEP 5 · 간접쓰기</p>
+    <p class="sec-label">STEP 7 · 순서 (1등급 빈순삽)</p>
     <h2 class="sec-title">간접쓰기 36~39번 — 연결 논리 변화 트렌드</h2>
     <p class="sec-desc">36(순서)·37(순서)·38·39(삽입)의 난이도 결정 요인: 객관적 단서 의존도. 최근 3년간 이 단서가 줄어들고 있다.</p>
 
@@ -879,162 +1034,9 @@ footer{
 
 <div class="divider"></div>
 
-<section id="q21">
-  <div class="wrap">
-    <p class="sec-label">STEP 6 · 함의추론</p>
-    <h2 class="sec-title">21번 함의추론 — "빈칸처럼 풀기"</h2>
-    <p class="sec-desc">밑줄 친 표현을 비워놓고 글의 논지를 먼저 파악. 선지에서 논지와 동의어를 찾는 방식이 13회 전수에서 100% 유효했다.</p>
-
-    <div class="callout">
-      <strong>핵심 원리.</strong> 함의추론의 정답은 거의 항상 <strong>글의 논지를 패러프레이즈한 선지</strong>다. 밑줄 표현을 직역하면 <strong>함정 선지(표면 의미)에 걸린다.</strong> 논지 파악 후 대입이 유일한 정도(正道).
-    </div>
-
-    <div class="grid-2" style="margin-bottom:1.5rem">
-      <div class="card">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">정답 분포 (13회)</div>
-        <div class="chart-box chart-box-sm2"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
-        <p style="font-size:12px;color:var(--muted);margin-top:8px">③ 최다(5회)지만 분산 → 번호 의존 전략 불가. 논지로만 풀 것.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:13px;font-weight:700;margin-bottom:12px">논지 유형별 패턴</div>
-        <div class="flow" style="gap:0">
-          <div class="flow-step">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px"></div>
-            <div><div style="font-size:13px;font-weight:600">역설/이중적 의미</div><div style="font-size:12px;color:var(--muted)">밑줄 단어의 표면 의미 ≠ 글의 의도. 반의어 느낌의 선지가 정답</div></div>
-          </div>
-          <div class="flow-step">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:7px"></div>
-            <div><div style="font-size:13px;font-weight:600">추상 → 구체 패러프레이즈</div><div style="font-size:12px;color:var(--muted)">밑줄이 추상적 표현. 선지에서 구체적으로 풀어 쓴 것이 정답</div></div>
-          </div>
-          <div class="flow-step">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:7px"></div>
-            <div><div style="font-size:13px;font-weight:600">직역 함정 선지</div><div style="font-size:12px;color:var(--muted)">밑줄을 그대로 직역한 선지 = 매회 오답. 절대 고르지 말 것</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="strat">
-      <div class="strat-head">
-        <span class="badge badge-navy">21번</span>
-        <span class="strat-title">함의추론 3단계 풀이법</span>
-      </div>
-      <ul>
-        <li><strong>Step 1</strong>: 밑줄 친 표현 무시하고 글 전체 논지를 한 문장으로 정리</li>
-        <li><strong>Step 2</strong>: 선지에서 논지와 같은 말을 다르게 쓴 것 찾기 (패러프레이즈 탐색)</li>
-        <li><strong>Step 3</strong>: 밑줄 표현에 선지를 대입해 글의 흐름이 매끄러운지 최종 확인</li>
-        <li>함정 선지 구별법: 밑줄 단어 자체를 쓰거나 직역한 선지 → 즉시 소거</li>
-        <li><strong>1등급</strong>: Step 1~2만으로 30초 이내 결정. <strong>2등급</strong>: 3단계 전체 적용 후 확정</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<section id="long-passage">
-  <div class="wrap">
-    <p class="sec-label">STEP 7 · 장문독해</p>
-    <h2 class="sec-title">장문독해 40~45번 — 마지막 6문항 전략</h2>
-    <p class="sec-desc">장문은 지문 1~2개에 2~3문항이 묶입니다. 70분 중 후반에 위치해 시간 압박이 심하지만, 정답 패턴을 알면 시간을 아낄 수 있습니다.</p>
-
-    <!-- 40-41번 -->
-    <div class="card" style="padding:28px;margin-bottom:20px">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
-        <span style="background:#00457F;color:#fff;font-weight:900;font-size:15px;padding:4px 14px;border-radius:20px">40·41번</span>
-        <span style="font-weight:700;font-size:17px;color:#1e293b">1지문 2문항 (주제·어법 or 순서)</span>
-        <span style="margin-left:auto;background:#fef3c7;color:#92400e;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px">40번 ①이 62%</span>
-      </div>
-      <div class="grid-2" style="gap:16px;margin-bottom:16px">
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">40번 정답 분포</p>
-          <div class="chart-box chart-box-xs"><canvas id="chart40" aria-label="40번 정답 분포"></canvas></div>
-          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center"><strong>①: 8회(62%)</strong> | ②: 3회 | ③: 1회 | ④: 1회 | ⑤: 0회</p>
-        </div>
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">41번 정답 분포</p>
-          <div class="chart-box chart-box-xs"><canvas id="chart41" aria-label="41번 정답 분포"></canvas></div>
-          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 5회 | <strong>②: 5회</strong> | ③: 3회 | ④: 0회 | ⑤: 0회</p>
-        </div>
-      </div>
-      <div class="strat">
-        <div class="strat-title">접근법</div>
-        <ul style="margin-left:18px;line-height:2;font-size:15px">
-          <li>40번은 <strong>①이 62%(8회)</strong> — 글의 요지/주제형, 첫 문장 집중</li>
-          <li>41번은 ①②에 집중 (10회로 77%) — 어법 or 빈칸형으로 출제</li>
-          <li>④⑤는 각 0회 — 즉시 소거</li>
-          <li>지문 길이가 길어도 첫 단락 + 마지막 단락 구조 파악이 핵심</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 42-43번 -->
-    <div class="card" style="padding:28px;margin-bottom:20px">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
-        <span style="background:#00457F;color:#fff;font-weight:900;font-size:15px;padding:4px 14px;border-radius:20px">42·43번</span>
-        <span style="font-weight:700;font-size:17px;color:#1e293b">3지문 세트 (순서·삽입·빈칸)</span>
-        <span style="margin-left:auto;background:#fef3c7;color:#92400e;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px">⑤ 집중 구간</span>
-      </div>
-      <div class="grid-2" style="gap:16px;margin-bottom:16px">
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">42번 정답 분포</p>
-          <div class="chart-box chart-box-xs"><canvas id="chart42" aria-label="42번 정답 분포"></canvas></div>
-          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 0회 | ②: 1회 | ③: 4회 | ④: 2회 | <strong>⑤: 6회(46%)</strong></p>
-        </div>
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">43번 정답 분포</p>
-          <div class="chart-box chart-box-xs"><canvas id="chart43" aria-label="43번 정답 분포"></canvas></div>
-          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 0회 | ②: 3회 | ③: 4회 | ④: 1회 | <strong>⑤: 5회(38%)</strong></p>
-        </div>
-      </div>
-      <div class="strat">
-        <div class="strat-title">접근법</div>
-        <ul style="margin-left:18px;line-height:2;font-size:15px">
-          <li>42번 <strong>⑤가 46%(6회)</strong>, 43번 ⑤가 38%(5회) — 후반 선지 집중</li>
-          <li>42·43번 모두 ①은 0회 — 즉시 소거</li>
-          <li>세 지문 순서 연결의 핵심: 지시어·연결어(therefore, however, thus) 추적</li>
-          <li>삽입문 유형: 삽입 문장의 대명사가 가리키는 명사를 앞 문장에서 확인</li>
-        </ul>
-      </div>
-    </div>
-
-    <!-- 44-45번 -->
-    <div class="card" style="padding:28px">
-      <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;flex-wrap:wrap">
-        <span style="background:#00457F;color:#fff;font-weight:900;font-size:15px;padding:4px 14px;border-radius:20px">44·45번</span>
-        <span style="font-weight:700;font-size:17px;color:#1e293b">마지막 2지문 세트</span>
-        <span style="margin-left:auto;background:#fee2e2;color:#991b1b;font-size:13px;font-weight:700;padding:3px 10px;border-radius:20px">시간 부족 위험</span>
-      </div>
-      <div class="grid-2" style="gap:16px;margin-bottom:16px">
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">44번 정답 분포</p>
-          <div class="chart-box chart-box-xs"><canvas id="chart44" aria-label="44번 정답 분포"></canvas></div>
-          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 1회 | ②: 3회 | <strong>③: 5회(38%)</strong> | ④: 1회 | ⑤: 3회</p>
-        </div>
-        <div>
-          <p style="font-size:14px;font-weight:700;color:#475569;margin-bottom:8px">45번 정답 분포</p>
-          <div class="chart-box chart-box-xs"><canvas id="chart45" aria-label="45번 정답 분포"></canvas></div>
-          <p style="font-size:13px;color:#64748b;margin-top:8px;text-align:center">①: 0회 | ②: 3회 | ③: 3회 | ④: 3회 | <strong>⑤: 4회</strong></p>
-        </div>
-      </div>
-      <div class="strat">
-        <div class="strat-title">접근법</div>
-        <ul style="margin-left:18px;line-height:2;font-size:15px">
-          <li>44번 <strong>③이 최다(5회, 38%)</strong> — 중간 선지 집중</li>
-          <li>45번 ①은 0회 — 즉시 소거</li>
-          <li>시간이 부족하면 44·45번을 가장 먼저 전략적으로 처리하고 장문 진입</li>
-          <li>두 지문 중 쉬운 쪽을 먼저 → 어려운 쪽 순서로 시간 배분</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
 <section id="killer">
   <div class="wrap">
-    <p class="sec-label">STEP 8 · 1등급 빈순삽</p>
+    <p class="sec-label">STEP 8 · 빈칸 (1등급 빈순삽·최종)</p>
     <h2 class="sec-title">킬러 문항 심층 전략</h2>
     <p class="sec-desc">31~34번(빈칸), 38·39번(삽입). 배점 3점짜리가 집중된 영역. 공식 기출 정답 + 빈칸 위치 직접 분석.</p>
 
@@ -1149,7 +1151,7 @@ footer{
 
 <section id="heatmap">
   <div class="wrap">
-    <p class="sec-label">참고 B · 전체 히트맵</p>
+    <p class="sec-label">참고 B · 히트맵</p>
     <h2 class="sec-title">전 문항 정답 히트맵 (1~45번)</h2>
     <p class="sec-desc">1~45번 전체 × 13회차 정답번호. 색이 진할수록 높은 번호(⑤), 밝을수록 낮은 번호(①). 회색 구분선이 듣기(1~17)와 독해(18~45) 경계.</p>
 

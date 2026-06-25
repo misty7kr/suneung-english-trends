@@ -348,16 +348,17 @@ footer{
 <nav aria-label="페이지 내비게이션">
   <div class="nav-inner">
     <span class="nav-logo">수능영어 트렌드</span>
-    <a href="#listening">듣기 분석</a>
-    <a href="#heatmap">전체 히트맵</a>
-    <a href="#killer">킬러 전략</a>
-    <a href="#35-39">흐름·삽입</a>
-    <a href="#indirect-writing">간접쓰기 36~39</a>
-    <a href="#q21">함의 전략</a>
-    <a href="#speed-zone">고속처리 22~28</a>
-    <a href="#grammar-vocab">어법·어휘</a>
-    <a href="#long-passage">장문 40~45</a>
     <a href="#strategy">풀이 순서</a>
+    <a href="#listening">1·듣기</a>
+    <a href="#speed-zone">2·고속처리</a>
+    <a href="#grammar-vocab">3·어법어휘</a>
+    <a href="#35-39">4·흐름삽입</a>
+    <a href="#indirect-writing">5·간접쓰기</a>
+    <a href="#q21">6·함의</a>
+    <a href="#long-passage">7·장문</a>
+    <a href="#killer">8·킬러빈칸</a>
+    <a href="#bias">참고·쏠림</a>
+    <a href="#heatmap">참고·히트맵</a>
   </div>
 </nav>
 
@@ -376,10 +377,136 @@ footer{
   </div>
 </header>
 
-<!-- 0. LISTENING -->
+<!-- 전략 순서대로 배치: 로드맵 → STEP1~8 → 참고자료 -->
+<section id="strategy">
+  <div class="wrap">
+    <p class="sec-label">전략 로드맵</p>
+    <h2 class="sec-title">1등급 vs 2등급 풀이 순서</h2>
+    <p class="sec-desc">수능 영어는 70분, 45문항. 시간 배분 전략이 등급을 가른다.</p>
+
+    <div class="grid-2">
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:8px">
+          <span style="background:var(--navy);color:white;font-size:11px;padding:3px 10px;border-radius:12px">1등급 목표</span>
+          <span style="font-size:12px;color:var(--muted)">90점↑ · 총 오답 1~2개 허용</span>
+        </div>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-num">1</div>
+            <div class="flow-content">
+              <h4>듣기 (1~17번)</h4>
+              <p>흘리지 않고 집중. 17번 끝나기 전 답 마킹 완료.</p>
+              <span class="time">25분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">2</div>
+            <div class="flow-content">
+              <h4>18~28번 속전속결</h4>
+              <p>목적·심경·주장·요지·도표·실용문. 지문 짧음. 빠르게 처리.</p>
+              <span class="time">10분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">3</div>
+            <div class="flow-content">
+              <h4>29·30 어법·어휘</h4>
+              <p>② 최빈(어법) → ④⑤ 확인(어휘). 근거 확인 후 마킹.</p>
+              <span class="time">4분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">4</div>
+            <div class="flow-content">
+              <h4>36·37 순서배열</h4>
+              <p>(B)(C) 연결 근거 확인. 최빈 ⑤(36번)·③(37번) 먼저 검토.</p>
+              <span class="time">6분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">5</div>
+            <div class="flow-content">
+              <h4>빈칸 31~33번</h4>
+              <p>빈칸 앞뒤 집중 → 논지 역추론. 31번은 최근 앞쪽 배치.</p>
+              <span class="time">10분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">6</div>
+            <div class="flow-content">
+              <h4>35·38·39 흐름·삽입</h4>
+              <p>35: ④ 우선 확인. 39: ③부터 올라오기. 연결어 추적.</p>
+              <span class="time">8분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num">7</div>
+            <div class="flow-content">
+              <h4>40~45 요약·장문</h4>
+              <p>40번 ① 우선. 장문은 지문 공유 확인 후 각 문항 독립 해결.</p>
+              <span class="time">7분</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;color:var(--amber-dark);margin-bottom:1rem;display:flex;align-items:center;gap:8px">
+          <span style="background:var(--amber);color:var(--dark);font-size:11px;padding:3px 10px;border-radius:12px">2등급 목표</span>
+          <span style="font-size:12px;color:var(--muted)">80점↑ · 오답 4~5개 허용</span>
+        </div>
+        <div class="flow">
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">1</div>
+            <div class="flow-content">
+              <h4>듣기 + 쉬운 독해 먼저</h4>
+              <p>18~28번을 빠르게 처리해 시간 확보가 핵심.</p>
+              <span class="time">35분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">2</div>
+            <div class="flow-content">
+              <h4>35·40번 우선 해결</h4>
+              <p>35번 ③④⑤ 확인(①② 안 읽음). 40번 ① 먼저 검토.</p>
+              <span class="time">4분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">3</div>
+            <div class="flow-content">
+              <h4>38·39 삽입(2점→3점)</h4>
+              <p>38번 먼저(2점, 쉬움). 39번은 ④⑤ 대입 비교.</p>
+              <span class="time">8분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">4</div>
+            <div class="flow-content">
+              <h4>31·32 빈칸(덜 어려운 것)</h4>
+              <p>31번 전체 읽고 역추론. 오답 소거 후 남은 2개에서 결정.</p>
+              <span class="time">8분</span>
+            </div>
+          </div>
+          <div class="flow-step">
+            <div class="flow-num" style="background:var(--amber);color:var(--dark)">5</div>
+            <div class="flow-content">
+              <h4>33번(킬러) + 장문</h4>
+              <p>33번은 시간이 남을 때. 장문 41~45는 지문 1회 정독 후 4~5문항 처리.</p>
+              <span class="time">15분</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <section id="listening">
   <div class="wrap">
-    <p class="sec-label">SECTION 01</p>
+    <p class="sec-label">STEP 1 · 듣기</p>
     <h2 class="sec-title">듣기 1~17번 정답 패턴</h2>
     <p class="sec-desc">듣기도 정답 쏠림이 존재한다. 시험장에서 헷갈릴 때 통계 근거로 활용 가능.</p>
 
@@ -417,283 +544,9 @@ footer{
 
 <div class="divider"></div>
 
-<!-- 1b. HEATMAP -->
-<section id="heatmap">
-  <div class="wrap">
-    <p class="sec-label">SECTION 02</p>
-    <h2 class="sec-title">전 문항 정답 히트맵 (1~45번)</h2>
-    <p class="sec-desc">1~45번 전체 × 13회차 정답번호. 색이 진할수록 높은 번호(⑤), 밝을수록 낮은 번호(①). 회색 구분선이 듣기(1~17)와 독해(18~45) 경계.</p>
-
-    <div class="card" style="padding:1.5rem">
-      <div class="heatmap-wrap">
-        <div class="heatmap" id="heatmapGrid"></div>
-      </div>
-      <div style="display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap">
-        <span style="font-size:12px;color:var(--muted)">정답번호</span>
-        <div style="display:flex;gap:6px;align-items:center">
-          <div style="width:16px;height:16px;border-radius:3px;background:#EDF5FA"></div><span style="font-size:11px;color:var(--muted)">①</span>
-          <div style="width:16px;height:16px;border-radius:3px;background:#9abfd8"></div><span style="font-size:11px;color:var(--muted)">②</span>
-          <div style="width:16px;height:16px;border-radius:3px;background:#4a8ab5"></div><span style="font-size:11px;color:var(--muted)">③</span>
-          <div style="width:16px;height:16px;border-radius:3px;background:#FFA723"></div><span style="font-size:11px;color:var(--muted)">④</span>
-          <div style="width:16px;height:16px;border-radius:3px;background:#00457F"></div><span style="font-size:11px;color:var(--muted)">⑤</span>
-        </div>
-        <span style="font-size:12px;color:var(--muted)">/ 테두리: 수능</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- 2. KILLER -->
-<section id="killer">
-  <div class="wrap">
-    <p class="sec-label">SECTION 03</p>
-    <h2 class="sec-title">킬러 문항 심층 전략</h2>
-    <p class="sec-desc">31~34번(빈칸), 38·39번(삽입). 배점 3점짜리가 집중된 영역. 공식 기출 정답 + 빈칸 위치 직접 분석.</p>
-
-    <!-- EBSi 정답률 박스 (DATA 자동 렌더) -->
-    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem">
-      <div style="font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em;margin-bottom:4px">실측 정답률 — 2026학년도 수능 영어 (EBSi 오답률 기준)</div>
-      <div style="font-size:11px;color:var(--muted);margin-bottom:12px">낮을수록 어려운 문항. 빈칸 32·33·34번이 정답률 20% 미만으로 최상위 난이도.</div>
-      <div class="rate-grid" id="diffGrid"></div>
-      <div style="margin-top:10px;font-size:12px;color:var(--muted)">빈칸추론(32·33·34)이 오답률 최상위. 3문항 모두 정답률 20% 미만 — 역대급 난이도.</div>
-    </div>
-
-    <div class="callout">
-      <strong>빈칸 31번의 전략적 전환 (공식 기출 12회 직접 분석).</strong> 2022~2024학년도 수능까지는 빈칸이 주로 지문 <strong>끝 문장(결론)</strong>에 배치됐다. 그런데 <strong>2025학년도 수능부터 4회 연속(25수능·26-6월·26-9월·26수능) 빈칸이 첫 문장</strong>으로 이동했다. 결론을 추론하던 방식에서 <strong>전체 지문을 읽고 첫 주제 문장을 역으로 복원</strong>하는 방식으로 전략을 바꿔야 한다.
-      <div style="font-size:11.5px;color:var(--muted);margin-top:8px">※ 위치(첫/중/끝)는 평가원 공식 문제지 PDF의 31~34번 지문을 한 문항씩 직접 읽어 판정. 2022학년도 9월 제외 12회 기준.</div>
-    </div>
-
-    <div class="grid-auto" style="margin-bottom:1.5rem">
-      <div class="card card-sm">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">31번 빈칸 — 최빈 정답</div>
-        <div class="big-num" style="color:var(--navy)">②</div>
-        <div class="big-label">13회 중 6회 (46%)</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:8px">⑤ 3회 · ① 2회 · ③ 2회 · ④ 0회</div>
-      </div>
-      <div class="card card-sm">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">32번 빈칸 — 분산형</div>
-        <div class="big-num" style="color:var(--navy)">②</div>
-        <div class="big-label">13회 중 4회 (31%)</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:8px">③ 3회 · ①④⑤ 각 2회 — 쏠림 약함</div>
-      </div>
-      <div class="card card-sm">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">33번 빈칸(킬러) — 최빈 정답</div>
-        <div class="big-num" style="color:var(--navy)">①</div>
-        <div class="big-label">13회 중 6회 (46%)</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:8px">④ 3회 · ②⑤ 각 2회 · ③ 0회</div>
-      </div>
-      <div class="card card-sm">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">34번 빈칸(킬러) — 분산형</div>
-        <div class="big-num" style="color:var(--navy)">②④⑤</div>
-        <div class="big-label">각 3회 (23%)</div>
-        <div style="font-size:12px;color:var(--muted);margin-top:8px">① ③ 각 2회 — 쏠림 없음</div>
-      </div>
-    </div>
-
-    <div class="strat">
-      <div class="strat-head">
-        <span class="badge badge-red">킬러 3점</span>
-        <span class="strat-title">31~34번 빈칸추론 심층 분석 (12회 직접 분석)</span>
-      </div>
-      <ul>
-        <li><strong>빈칸의 73%가 첫 문장 아니면 끝 문장</strong> — 48문항(12회×4) 중 끝 문장 20개(42%)·첫 문장 15개(31%)·중간 13개(27%). <strong>빈칸이 어디든 첫 문장과 끝 문장을 먼저 읽으면 논리 축이 잡힌다.</strong></li>
-        <li><strong>31번은 끝→앞으로 이동 중</strong> — 25수능부터 4회 연속 첫 문장 빈칸. 뒤 문장 전체가 근거 → 역추론 필요. 체감 난이도 상승의 직접 원인</li>
-        <li><strong>33·34번(킬러)은 끝 문장 집중</strong> — 둘 다 끝 문장 빈칸이 6회로 최다. 지문을 끝까지 읽고 결론을 추론하는 구조</li>
-        <li><strong>정답 번호</strong> — 31번은 ②(46%)·⑤로 쏠림이 있으나, 32·34번은 분산형이라 번호 추측 금물. 33번은 ①(46%)·④ 집중</li>
-        <li>오답 3대 패턴: ①근처 단어 재활용(범위 혼동) ②반대 방향 개념(역관계) ③표면 유사 일반어</li>
-        <li><strong>1등급 전략</strong>: 첫 문장·끝 문장 먼저 → 빈칸 주변 3문장으로 45초 결정</li>
-        <li><strong>2등급 전략</strong>: 오답 소거 후 남은 2개에서 지문 전체 재스캔(근거 문장 위치 확인)</li>
-      </ul>
-    </div>
-
-    <div style="margin-top:2rem;margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">31번 빈칸 위치 추이 — 끝 문장 → 첫 문장 이동 (12회)</div>
-      <div class="chart-box chart-box-lg"><canvas id="chartBlank31" aria-label="31번 빈칸 위치 추이 라인차트"></canvas></div>
-      <div style="margin-top:12px;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:6px;font-size:12.5px;line-height:1.85;color:var(--text)">
-        <div style="margin-bottom:6px"><strong style="color:var(--navy)">그래프 읽는 법</strong> — 빈칸이 지문의 어느 문장에 있는지(첫 / 중간 / 끝).</div>
-        <div style="margin-bottom:4px"><strong style="color:var(--amber-dark)">22수능~24수능</strong> — 빈칸이 주로 <strong>끝 문장</strong>. 앞 논지를 따라 읽다 보면 자연스럽게 빈칸 근거가 쌓이는 구조.</div>
-        <div><strong style="color:#c0392b">25수능 이후 4회 연속</strong> — 빈칸이 <strong>첫 문장</strong>으로 이동. 근거가 지문 전체에 퍼져 있어 뒤를 다 읽고 역으로 첫 문장을 복원해야 한다. 체감 난이도가 높아진 직접 원인.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- 3. 35/39 -->
-<section id="35-39">
-  <div class="wrap">
-    <p class="sec-label">SECTION 04</p>
-    <h2 class="sec-title">흐름무관(35) · 삽입(38·39) 분리 분석</h2>
-    <p class="sec-desc">두 유형은 전혀 다른 문제다. 흐름무관은 논지 이탈 문장을 찾는 것, 삽입은 연결 논리를 맞추는 것.</p>
-
-    <div class="grid-2" style="margin-bottom:1.5rem">
-      <div class="card">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">35번 — 흐름무관</div>
-        <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:14px">
-          <div>
-            <div class="big-num" style="color:var(--amber-dark)">④</div>
-            <div class="big-label">8회 (62%)</div>
-          </div>
-          <div>
-            <div style="font-size:28px;font-weight:700;color:var(--muted)">③</div>
-            <div style="font-size:11px;color:var(--muted)">5회 (38%)</div>
-          </div>
-        </div>
-        <div class="chart-box chart-box-xs"><canvas id="chart35" aria-label="35번 정답 분포 바차트"></canvas></div>
-        <p style="font-size:12px;color:var(--muted);margin-top:10px">최근 6회 연속(25학년도 6월~26수능) ④. ①②는 13회 중 0회.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">38·39번 — 문장삽입</div>
-        <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:14px">
-          <div>
-            <div class="big-num" style="color:var(--navy)">④⑤</div>
-            <div class="big-label">38번: ④⑤ 합산 77%</div>
-          </div>
-        </div>
-        <div class="chart-box chart-box-xs"><canvas id="chart3839" aria-label="38·39번 정답 분포 바차트"></canvas></div>
-        <p style="font-size:12px;color:var(--muted);margin-top:10px">39번: ④⑤ 합산 69%. ①은 두 문항 모두 0회(②는 38번 1회·39번 2회).</p>
-      </div>
-    </div>
-
-    <div style="margin-bottom:1rem">
-      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">35 · 38 · 39번 회차별 정답 추이</div>
-      <div class="chart-box chart-box-md"><canvas id="chartTimeline" aria-label="35·38·39번 정답 추이 라인차트"></canvas></div>
-    </div>
-
-    <div class="strat amber">
-      <div class="strat-head">
-        <span class="badge badge-amber">35번</span>
-        <span class="strat-title">흐름무관 — ④ 먼저 읽고 논지 이탈 확인</span>
-      </div>
-      <ul>
-        <li>실전 전략: <strong>③④⑤ 문장만 먼저 확인</strong> → ①②는 13회 모두 아님(읽을 필요 없음)</li>
-        <li>논지 이탈 판단: 글 전체 주제와 무관하거나, 앞뒤 문장과 소재가 단절된 문장</li>
-        <li>최근 6회 연속 ④ → 실전에서 ④를 1순위로 확인하되, 반드시 앞뒤 문장과 비교해 확정</li>
-        <li>전통적으로 쉬운 유형이지만 최근 오답 선지의 매력도가 높아져 체감 난이도가 오르는 추세. ④에 의존하지 말고 반드시 논지 이탈을 직접 확인</li>
-        <li>출제 패턴 변화: 단순 소재 이탈 → <strong>논지는 공유하지만 범위·방향이 미묘하게 다른 문장</strong>으로 난이도 상승</li>
-        <li><strong>1등급</strong>: ④ 확인 후 ③ 비교, 30초 결정. <strong>2등급</strong>: ③④⑤ 모두 확인 후 소거</li>
-      </ul>
-    </div>
-    <div class="strat red" style="margin-top:8px">
-      <div class="strat-head">
-        <span class="badge badge-red">39번 킬러</span>
-        <span class="strat-title">문장삽입(3점) — 연결어·지시어 추적</span>
-      </div>
-      <ul>
-        <li>문장삽입은 3점 배점이 자주 걸리는 킬러 구간(26수능 38번 정답률 37.3%·39번 32.3%, EBSi). 정답 ④⑤ 비중이 높지만, 번호가 아니라 주어진 문장의 연결 논리로 위치를 확정해야 함</li>
-        <li>주어진 문장의 <strong>연결어(However/Therefore/Thus)</strong>와 <strong>지시어(this/it/such)</strong>가 무엇을 받는지 확인</li>
-        <li>전략: <strong>③부터 올라오며 확인</strong>. ①은 출제 없음(38·39번 13회 모두 0회)</li>
-        <li>삽입 후 앞뒤 문장의 논리 흐름이 매끄러운지 2문장 단위로 검증</li>
-        <li><strong>1등급</strong>: 연결어 역접/인과 전환점 찾아 45초 결정. <strong>2등급</strong>: ④⑤ 대입 비교 후 선택</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- 4b. 간접쓰기 36~39 심층 -->
-<section id="indirect-writing">
-  <div class="wrap">
-    <p class="sec-label">SECTION 05</p>
-    <h2 class="sec-title">간접쓰기 36~39번 — 연결 논리 변화 트렌드</h2>
-    <p class="sec-desc">36(순서)·37(순서)·38·39(삽입)의 난이도 결정 요인: 객관적 단서 의존도. 최근 3년간 이 단서가 줄어들고 있다.</p>
-
-    <div class="callout">
-      <strong>핵심 트렌드 — 객관적 단서 감소.</strong> 2022~2023수능: However·But·Therefore 등 명시적 연결사·지시어(this/it)가 정답 실마리로 작동. 2024~2026수능: 연결사가 줄거나 없어지고 <strong>문장 간 내용 흐름 자체</strong>가 단서로 옮겨가는 추세. 단서 의존 전략이 통하지 않는 구조로 전환 중.
-    </div>
-
-    <div class="grid-2" style="margin-bottom:1.5rem">
-      <div class="strat">
-        <div class="strat-head">
-          <span class="badge badge-red">37번 3점</span>
-          <span class="strat-title">글의 순서 — 내용 흐름 추적</span>
-        </div>
-        <ul>
-          <li>37번은 3점 배점 단골 킬러. 명시적 연결표현이 있어도 전환 방향 판단이 핵심 변별 요소</li>
-          <li>전략: ①연결사 위치 먼저 스캔 → ②없으면 각 단락의 첫/마지막 문장 의미 연결 → ③주어진 문장과 내용상 이어지는 단락 순서 배치</li>
-          <li><strong>오답 함정</strong>: 첫 단락을 잘못 잡으면 연쇄 실패. 주어진 문장과 내용상 직결되는 단락 B를 먼저 고정</li>
-        </ul>
-      </div>
-      <div class="strat amber">
-        <div class="strat-head">
-          <span class="badge badge-amber">36번</span>
-          <span class="strat-title">글의 순서 — 2점 안전 확보</span>
-        </div>
-        <ul>
-          <li>2점 문항이지만 최근 들어 까다로워지는 추세 → 안전 확보 구간으로만 보지 말 것</li>
-          <li>전략: 37번보다 명시적 단서가 상대적으로 많음 → 지시어·연결사 먼저 체크</li>
-          <li>실전 시간배분: 36번 2분 → 37번 3분. 37번이 안 풀리면 넘기고 39번 먼저</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- 4. Q21 -->
-<section id="q21">
-  <div class="wrap">
-    <p class="sec-label">SECTION 06</p>
-    <h2 class="sec-title">21번 함의추론 — "빈칸처럼 풀기"</h2>
-    <p class="sec-desc">밑줄 친 표현을 비워놓고 글의 논지를 먼저 파악. 선지에서 논지와 동의어를 찾는 방식이 13회 전수에서 100% 유효했다.</p>
-
-    <div class="callout">
-      <strong>핵심 원리.</strong> 함의추론의 정답은 거의 항상 <strong>글의 논지를 패러프레이즈한 선지</strong>다. 밑줄 표현을 직역하면 <strong>함정 선지(표면 의미)에 걸린다.</strong> 논지 파악 후 대입이 유일한 정도(正道).
-    </div>
-
-    <div class="grid-2" style="margin-bottom:1.5rem">
-      <div class="card">
-        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">정답 분포 (13회)</div>
-        <div class="chart-box chart-box-sm2"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
-        <p style="font-size:12px;color:var(--muted);margin-top:8px">③ 최다(5회)지만 분산 → 번호 의존 전략 불가. 논지로만 풀 것.</p>
-      </div>
-      <div class="card">
-        <div style="font-size:13px;font-weight:700;margin-bottom:12px">논지 유형별 패턴</div>
-        <div class="flow" style="gap:0">
-          <div class="flow-step">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px"></div>
-            <div><div style="font-size:13px;font-weight:600">역설/이중적 의미</div><div style="font-size:12px;color:var(--muted)">밑줄 단어의 표면 의미 ≠ 글의 의도. 반의어 느낌의 선지가 정답</div></div>
-          </div>
-          <div class="flow-step">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:7px"></div>
-            <div><div style="font-size:13px;font-weight:600">추상 → 구체 패러프레이즈</div><div style="font-size:12px;color:var(--muted)">밑줄이 추상적 표현. 선지에서 구체적으로 풀어 쓴 것이 정답</div></div>
-          </div>
-          <div class="flow-step">
-            <div style="width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:7px"></div>
-            <div><div style="font-size:13px;font-weight:600">직역 함정 선지</div><div style="font-size:12px;color:var(--muted)">밑줄을 그대로 직역한 선지 = 매회 오답. 절대 고르지 말 것</div></div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="strat">
-      <div class="strat-head">
-        <span class="badge badge-navy">21번</span>
-        <span class="strat-title">함의추론 3단계 풀이법</span>
-      </div>
-      <ul>
-        <li><strong>Step 1</strong>: 밑줄 친 표현 무시하고 글 전체 논지를 한 문장으로 정리</li>
-        <li><strong>Step 2</strong>: 선지에서 논지와 같은 말을 다르게 쓴 것 찾기 (패러프레이즈 탐색)</li>
-        <li><strong>Step 3</strong>: 밑줄 표현에 선지를 대입해 글의 흐름이 매끄러운지 최종 확인</li>
-        <li>함정 선지 구별법: 밑줄 단어 자체를 쓰거나 직역한 선지 → 즉시 소거</li>
-        <li><strong>1등급</strong>: Step 1~2만으로 30초 이내 결정. <strong>2등급</strong>: 3단계 전체 적용 후 확정</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<div class="divider"></div>
-
-<!-- 고속처리 22~28번 -->
 <section id="speed-zone">
   <div class="wrap">
-    <p class="sec-label">SECTION 07</p>
+    <p class="sec-label">STEP 2 · 고속처리</p>
     <h2 class="sec-title">고속처리 구간 — 22~28번 유형별 접근법</h2>
     <p class="sec-desc">22~28번은 킬러 전 고속처리 구간입니다. 유형별 접근 원리를 정확히 알면 문항당 1분 이내 처리가 가능합니다. 아래는 13회차 실측 데이터 기반 접근법입니다.</p>
 
@@ -846,10 +699,9 @@ footer{
 
 <div class="divider"></div>
 
-<!-- 어법·어휘 -->
 <section id="grammar-vocab">
   <div class="wrap">
-    <p class="sec-label">SECTION 08</p>
+    <p class="sec-label">STEP 3 · 어법·어휘</p>
     <h2 class="sec-title">어법(29번) · 어휘(30번) — 정답 쏠림의 왕</h2>
     <p class="sec-desc">매년 빠지지 않는 어법·어휘 2문항은 정답 번호 쏠림이 가장 극단적인 영역입니다. 실측 13회차 데이터를 확인하세요.</p>
 
@@ -915,39 +767,71 @@ footer{
 
 <div class="divider"></div>
 
-<!-- 6. 정답쏠림 -->
-<section id="bias">
+<section id="35-39">
   <div class="wrap">
-    <p class="sec-label">SECTION 09</p>
-    <h2 class="sec-title">정답 쏠림 패턴 TOP 문항</h2>
-    <p class="sec-desc">특정 번호가 통계적으로 유의미하게 쏠린 문항. 시험장 멘탈 관리에 활용하되, 반드시 근거 확인 후 마킹.</p>
+    <p class="sec-label">STEP 4 · 흐름·삽입</p>
+    <h2 class="sec-title">흐름무관(35) · 삽입(38·39) 분리 분석</h2>
+    <p class="sec-desc">두 유형은 전혀 다른 문제다. 흐름무관은 논지 이탈 문장을 찾는 것, 삽입은 연결 논리를 맞추는 것.</p>
 
-    <div class="card" style="overflow:auto;margin-bottom:1.5rem">
-      <table>
-        <thead>
-          <tr>
-            <th>문항</th>
-            <th>유형</th>
-            <th>최빈 정답</th>
-            <th>빈도</th>
-            <th>비율</th>
-            <th>분포 (①~⑤)</th>
-          </tr>
-        </thead>
-        <tbody id="biasTable"></tbody>
-      </table>
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="card">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">35번 — 흐름무관</div>
+        <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:14px">
+          <div>
+            <div class="big-num" style="color:var(--amber-dark)">④</div>
+            <div class="big-label">8회 (62%)</div>
+          </div>
+          <div>
+            <div style="font-size:28px;font-weight:700;color:var(--muted)">③</div>
+            <div style="font-size:11px;color:var(--muted)">5회 (38%)</div>
+          </div>
+        </div>
+        <div class="chart-box chart-box-xs"><canvas id="chart35" aria-label="35번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px">최근 6회 연속(25학년도 6월~26수능) ④. ①②는 13회 중 0회.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:12px;font-weight:700;color:var(--muted);margin-bottom:12px">38·39번 — 문장삽입</div>
+        <div style="display:flex;gap:16px;align-items:flex-end;margin-bottom:14px">
+          <div>
+            <div class="big-num" style="color:var(--navy)">④⑤</div>
+            <div class="big-label">38번: ④⑤ 합산 77%</div>
+          </div>
+        </div>
+        <div class="chart-box chart-box-xs"><canvas id="chart3839" aria-label="38·39번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:10px">39번: ④⑤ 합산 69%. ①은 두 문항 모두 0회(②는 38번 1회·39번 2회).</p>
+      </div>
     </div>
 
-    <div class="strat green">
+    <div style="margin-bottom:1rem">
+      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">35 · 38 · 39번 회차별 정답 추이</div>
+      <div class="chart-box chart-box-md"><canvas id="chartTimeline" aria-label="35·38·39번 정답 추이 라인차트"></canvas></div>
+    </div>
+
+    <div class="strat amber">
       <div class="strat-head">
-        <span class="badge badge-green">40번</span>
-        <span class="strat-title">요약문 — ① 쏠림 62% (8/13)</span>
+        <span class="badge badge-amber">35번</span>
+        <span class="strat-title">흐름무관 — ④ 먼저 읽고 논지 이탈 확인</span>
       </div>
       <ul>
-        <li>요약문은 글의 핵심 주장을 (A)(B) 두 단어로 축약. 선지는 주로 반의어 쌍으로 구성</li>
-        <li>글 첫 문장 + 마지막 문장 → 요약 (A)(B) 각 대입 → 의미 성립 여부 확인</li>
-        <li>① 쏠림이지만 최근 3회(26학년도)는 ②④③ → 맹신 금지. 근거 확인 필수</li>
-        <li>배점 2점. 시간 대비 효율 최고. <strong>1분 이내 해결 목표.</strong></li>
+        <li>실전 전략: <strong>③④⑤ 문장만 먼저 확인</strong> → ①②는 13회 모두 아님(읽을 필요 없음)</li>
+        <li>논지 이탈 판단: 글 전체 주제와 무관하거나, 앞뒤 문장과 소재가 단절된 문장</li>
+        <li>최근 6회 연속 ④ → 실전에서 ④를 1순위로 확인하되, 반드시 앞뒤 문장과 비교해 확정</li>
+        <li>전통적으로 쉬운 유형이지만 최근 오답 선지의 매력도가 높아져 체감 난이도가 오르는 추세. ④에 의존하지 말고 반드시 논지 이탈을 직접 확인</li>
+        <li>출제 패턴 변화: 단순 소재 이탈 → <strong>논지는 공유하지만 범위·방향이 미묘하게 다른 문장</strong>으로 난이도 상승</li>
+        <li><strong>1등급</strong>: ④ 확인 후 ③ 비교, 30초 결정. <strong>2등급</strong>: ③④⑤ 모두 확인 후 소거</li>
+      </ul>
+    </div>
+    <div class="strat red" style="margin-top:8px">
+      <div class="strat-head">
+        <span class="badge badge-red">39번 킬러</span>
+        <span class="strat-title">문장삽입(3점) — 연결어·지시어 추적</span>
+      </div>
+      <ul>
+        <li>문장삽입은 3점 배점이 자주 걸리는 킬러 구간(26수능 38번 정답률 37.3%·39번 32.3%, EBSi). 정답 ④⑤ 비중이 높지만, 번호가 아니라 주어진 문장의 연결 논리로 위치를 확정해야 함</li>
+        <li>주어진 문장의 <strong>연결어(However/Therefore/Thus)</strong>와 <strong>지시어(this/it/such)</strong>가 무엇을 받는지 확인</li>
+        <li>전략: <strong>③부터 올라오며 확인</strong>. ①은 출제 없음(38·39번 13회 모두 0회)</li>
+        <li>삽입 후 앞뒤 문장의 논리 흐름이 매끄러운지 2문장 단위로 검증</li>
+        <li><strong>1등급</strong>: 연결어 역접/인과 전환점 찾아 45초 결정. <strong>2등급</strong>: ④⑤ 대입 비교 후 선택</li>
       </ul>
     </div>
   </div>
@@ -955,137 +839,102 @@ footer{
 
 <div class="divider"></div>
 
-<!-- 6. STRATEGY FLOW -->
-<section id="strategy">
+<section id="indirect-writing">
   <div class="wrap">
-    <p class="sec-label">SECTION 10</p>
-    <h2 class="sec-title">1등급 vs 2등급 풀이 순서</h2>
-    <p class="sec-desc">수능 영어는 70분, 45문항. 시간 배분 전략이 등급을 가른다.</p>
+    <p class="sec-label">STEP 5 · 간접쓰기</p>
+    <h2 class="sec-title">간접쓰기 36~39번 — 연결 논리 변화 트렌드</h2>
+    <p class="sec-desc">36(순서)·37(순서)·38·39(삽입)의 난이도 결정 요인: 객관적 단서 의존도. 최근 3년간 이 단서가 줄어들고 있다.</p>
 
-    <div class="grid-2">
-      <div class="card">
-        <div style="font-size:13px;font-weight:700;color:var(--navy);margin-bottom:1rem;display:flex;align-items:center;gap:8px">
-          <span style="background:var(--navy);color:white;font-size:11px;padding:3px 10px;border-radius:12px">1등급 목표</span>
-          <span style="font-size:12px;color:var(--muted)">90점↑ · 총 오답 1~2개 허용</span>
+    <div class="callout">
+      <strong>핵심 트렌드 — 객관적 단서 감소.</strong> 2022~2023수능: However·But·Therefore 등 명시적 연결사·지시어(this/it)가 정답 실마리로 작동. 2024~2026수능: 연결사가 줄거나 없어지고 <strong>문장 간 내용 흐름 자체</strong>가 단서로 옮겨가는 추세. 단서 의존 전략이 통하지 않는 구조로 전환 중.
+    </div>
+
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="strat">
+        <div class="strat-head">
+          <span class="badge badge-red">37번 3점</span>
+          <span class="strat-title">글의 순서 — 내용 흐름 추적</span>
         </div>
-        <div class="flow">
+        <ul>
+          <li>37번은 3점 배점 단골 킬러. 명시적 연결표현이 있어도 전환 방향 판단이 핵심 변별 요소</li>
+          <li>전략: ①연결사 위치 먼저 스캔 → ②없으면 각 단락의 첫/마지막 문장 의미 연결 → ③주어진 문장과 내용상 이어지는 단락 순서 배치</li>
+          <li><strong>오답 함정</strong>: 첫 단락을 잘못 잡으면 연쇄 실패. 주어진 문장과 내용상 직결되는 단락 B를 먼저 고정</li>
+        </ul>
+      </div>
+      <div class="strat amber">
+        <div class="strat-head">
+          <span class="badge badge-amber">36번</span>
+          <span class="strat-title">글의 순서 — 2점 안전 확보</span>
+        </div>
+        <ul>
+          <li>2점 문항이지만 최근 들어 까다로워지는 추세 → 안전 확보 구간으로만 보지 말 것</li>
+          <li>전략: 37번보다 명시적 단서가 상대적으로 많음 → 지시어·연결사 먼저 체크</li>
+          <li>실전 시간배분: 36번 2분 → 37번 3분. 37번이 안 풀리면 넘기고 39번 먼저</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="q21">
+  <div class="wrap">
+    <p class="sec-label">STEP 6 · 함의추론</p>
+    <h2 class="sec-title">21번 함의추론 — "빈칸처럼 풀기"</h2>
+    <p class="sec-desc">밑줄 친 표현을 비워놓고 글의 논지를 먼저 파악. 선지에서 논지와 동의어를 찾는 방식이 13회 전수에서 100% 유효했다.</p>
+
+    <div class="callout">
+      <strong>핵심 원리.</strong> 함의추론의 정답은 거의 항상 <strong>글의 논지를 패러프레이즈한 선지</strong>다. 밑줄 표현을 직역하면 <strong>함정 선지(표면 의미)에 걸린다.</strong> 논지 파악 후 대입이 유일한 정도(正道).
+    </div>
+
+    <div class="grid-2" style="margin-bottom:1.5rem">
+      <div class="card">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:10px">정답 분포 (13회)</div>
+        <div class="chart-box chart-box-sm2"><canvas id="chart21" aria-label="21번 정답 분포 바차트"></canvas></div>
+        <p style="font-size:12px;color:var(--muted);margin-top:8px">③ 최다(5회)지만 분산 → 번호 의존 전략 불가. 논지로만 풀 것.</p>
+      </div>
+      <div class="card">
+        <div style="font-size:13px;font-weight:700;margin-bottom:12px">논지 유형별 패턴</div>
+        <div class="flow" style="gap:0">
           <div class="flow-step">
-            <div class="flow-num">1</div>
-            <div class="flow-content">
-              <h4>듣기 (1~17번)</h4>
-              <p>흘리지 않고 집중. 17번 끝나기 전 답 마킹 완료.</p>
-              <span class="time">25분</span>
-            </div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--amber);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">역설/이중적 의미</div><div style="font-size:12px;color:var(--muted)">밑줄 단어의 표면 의미 ≠ 글의 의도. 반의어 느낌의 선지가 정답</div></div>
           </div>
           <div class="flow-step">
-            <div class="flow-num">2</div>
-            <div class="flow-content">
-              <h4>18~28번 속전속결</h4>
-              <p>목적·심경·주장·요지·도표·실용문. 지문 짧음. 빠르게 처리.</p>
-              <span class="time">10분</span>
-            </div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--navy);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">추상 → 구체 패러프레이즈</div><div style="font-size:12px;color:var(--muted)">밑줄이 추상적 표현. 선지에서 구체적으로 풀어 쓴 것이 정답</div></div>
           </div>
           <div class="flow-step">
-            <div class="flow-num">3</div>
-            <div class="flow-content">
-              <h4>29·30 어법·어휘</h4>
-              <p>② 최빈(어법) → ④⑤ 확인(어휘). 근거 확인 후 마킹.</p>
-              <span class="time">4분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num">4</div>
-            <div class="flow-content">
-              <h4>36·37 순서배열</h4>
-              <p>(B)(C) 연결 근거 확인. 최빈 ⑤(36번)·③(37번) 먼저 검토.</p>
-              <span class="time">6분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num">5</div>
-            <div class="flow-content">
-              <h4>빈칸 31~33번</h4>
-              <p>빈칸 앞뒤 집중 → 논지 역추론. 31번은 최근 앞쪽 배치.</p>
-              <span class="time">10분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num">6</div>
-            <div class="flow-content">
-              <h4>35·38·39 흐름·삽입</h4>
-              <p>35: ④ 우선 확인. 39: ③부터 올라오기. 연결어 추적.</p>
-              <span class="time">8분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num">7</div>
-            <div class="flow-content">
-              <h4>40~45 요약·장문</h4>
-              <p>40번 ① 우선. 장문은 지문 공유 확인 후 각 문항 독립 해결.</p>
-              <span class="time">7분</span>
-            </div>
+            <div style="width:8px;height:8px;border-radius:50%;background:var(--muted);flex-shrink:0;margin-top:7px"></div>
+            <div><div style="font-size:13px;font-weight:600">직역 함정 선지</div><div style="font-size:12px;color:var(--muted)">밑줄을 그대로 직역한 선지 = 매회 오답. 절대 고르지 말 것</div></div>
           </div>
         </div>
       </div>
+    </div>
 
-      <div class="card">
-        <div style="font-size:13px;font-weight:700;color:var(--amber-dark);margin-bottom:1rem;display:flex;align-items:center;gap:8px">
-          <span style="background:var(--amber);color:var(--dark);font-size:11px;padding:3px 10px;border-radius:12px">2등급 목표</span>
-          <span style="font-size:12px;color:var(--muted)">80점↑ · 오답 4~5개 허용</span>
-        </div>
-        <div class="flow">
-          <div class="flow-step">
-            <div class="flow-num" style="background:var(--amber);color:var(--dark)">1</div>
-            <div class="flow-content">
-              <h4>듣기 + 쉬운 독해 먼저</h4>
-              <p>18~28번을 빠르게 처리해 시간 확보가 핵심.</p>
-              <span class="time">35분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num" style="background:var(--amber);color:var(--dark)">2</div>
-            <div class="flow-content">
-              <h4>35·40번 우선 해결</h4>
-              <p>35번 ③④⑤ 확인(①② 안 읽음). 40번 ① 먼저 검토.</p>
-              <span class="time">4분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num" style="background:var(--amber);color:var(--dark)">3</div>
-            <div class="flow-content">
-              <h4>38·39 삽입(2점→3점)</h4>
-              <p>38번 먼저(2점, 쉬움). 39번은 ④⑤ 대입 비교.</p>
-              <span class="time">8분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num" style="background:var(--amber);color:var(--dark)">4</div>
-            <div class="flow-content">
-              <h4>31·32 빈칸(덜 어려운 것)</h4>
-              <p>31번 전체 읽고 역추론. 오답 소거 후 남은 2개에서 결정.</p>
-              <span class="time">8분</span>
-            </div>
-          </div>
-          <div class="flow-step">
-            <div class="flow-num" style="background:var(--amber);color:var(--dark)">5</div>
-            <div class="flow-content">
-              <h4>33번(킬러) + 장문</h4>
-              <p>33번은 시간이 남을 때. 장문 41~45는 지문 1회 정독 후 4~5문항 처리.</p>
-              <span class="time">15분</span>
-            </div>
-          </div>
-        </div>
+    <div class="strat">
+      <div class="strat-head">
+        <span class="badge badge-navy">21번</span>
+        <span class="strat-title">함의추론 3단계 풀이법</span>
       </div>
+      <ul>
+        <li><strong>Step 1</strong>: 밑줄 친 표현 무시하고 글 전체 논지를 한 문장으로 정리</li>
+        <li><strong>Step 2</strong>: 선지에서 논지와 같은 말을 다르게 쓴 것 찾기 (패러프레이즈 탐색)</li>
+        <li><strong>Step 3</strong>: 밑줄 표현에 선지를 대입해 글의 흐름이 매끄러운지 최종 확인</li>
+        <li>함정 선지 구별법: 밑줄 단어 자체를 쓰거나 직역한 선지 → 즉시 소거</li>
+        <li><strong>1등급</strong>: Step 1~2만으로 30초 이내 결정. <strong>2등급</strong>: 3단계 전체 적용 후 확정</li>
+      </ul>
     </div>
   </div>
 </section>
 
 <div class="divider"></div>
 
-<!-- 장문독해 40~45번 -->
 <section id="long-passage">
   <div class="wrap">
-    <p class="sec-label">SECTION 11</p>
+    <p class="sec-label">STEP 7 · 장문독해</p>
     <h2 class="sec-title">장문독해 40~45번 — 마지막 6문항 전략</h2>
     <p class="sec-desc">장문은 지문 1~2개에 2~3문항이 묶입니다. 70분 중 후반에 위치해 시간 압박이 심하지만, 정답 패턴을 알면 시간을 아낄 수 있습니다.</p>
 
@@ -1183,10 +1032,151 @@ footer{
 
 <div class="divider"></div>
 
-<!-- 7. ROUND TABLE -->
+<section id="killer">
+  <div class="wrap">
+    <p class="sec-label">STEP 8 · 1등급 빈순삽</p>
+    <h2 class="sec-title">킬러 문항 심층 전략</h2>
+    <p class="sec-desc">31~34번(빈칸), 38·39번(삽입). 배점 3점짜리가 집중된 영역. 공식 기출 정답 + 빈칸 위치 직접 분석.</p>
+
+    <!-- EBSi 정답률 박스 (DATA 자동 렌더) -->
+    <div style="background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:1.25rem 1.5rem;margin-bottom:1.5rem">
+      <div style="font-size:12px;font-weight:700;color:var(--muted);letter-spacing:.05em;margin-bottom:4px">실측 정답률 — 2026학년도 수능 영어 (EBSi 오답률 기준)</div>
+      <div style="font-size:11px;color:var(--muted);margin-bottom:12px">낮을수록 어려운 문항. 빈칸 32·33·34번이 정답률 20% 미만으로 최상위 난이도.</div>
+      <div class="rate-grid" id="diffGrid"></div>
+      <div style="margin-top:10px;font-size:12px;color:var(--muted)">빈칸추론(32·33·34)이 오답률 최상위. 3문항 모두 정답률 20% 미만 — 역대급 난이도.</div>
+    </div>
+
+    <div class="callout">
+      <strong>빈칸 31번의 전략적 전환 (공식 기출 12회 직접 분석).</strong> 2022~2024학년도 수능까지는 빈칸이 주로 지문 <strong>끝 문장(결론)</strong>에 배치됐다. 그런데 <strong>2025학년도 수능부터 4회 연속(25수능·26-6월·26-9월·26수능) 빈칸이 첫 문장</strong>으로 이동했다. 결론을 추론하던 방식에서 <strong>전체 지문을 읽고 첫 주제 문장을 역으로 복원</strong>하는 방식으로 전략을 바꿔야 한다.
+      <div style="font-size:11.5px;color:var(--muted);margin-top:8px">※ 위치(첫/중/끝)는 평가원 공식 문제지 PDF의 31~34번 지문을 한 문항씩 직접 읽어 판정. 2022학년도 9월 제외 12회 기준.</div>
+    </div>
+
+    <div class="grid-auto" style="margin-bottom:1.5rem">
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">31번 빈칸 — 최빈 정답</div>
+        <div class="big-num" style="color:var(--navy)">②</div>
+        <div class="big-label">13회 중 6회 (46%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">⑤ 3회 · ① 2회 · ③ 2회 · ④ 0회</div>
+      </div>
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">32번 빈칸 — 분산형</div>
+        <div class="big-num" style="color:var(--navy)">②</div>
+        <div class="big-label">13회 중 4회 (31%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">③ 3회 · ①④⑤ 각 2회 — 쏠림 약함</div>
+      </div>
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">33번 빈칸(킬러) — 최빈 정답</div>
+        <div class="big-num" style="color:var(--navy)">①</div>
+        <div class="big-label">13회 중 6회 (46%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">④ 3회 · ②⑤ 각 2회 · ③ 0회</div>
+      </div>
+      <div class="card card-sm">
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">34번 빈칸(킬러) — 분산형</div>
+        <div class="big-num" style="color:var(--navy)">②④⑤</div>
+        <div class="big-label">각 3회 (23%)</div>
+        <div style="font-size:12px;color:var(--muted);margin-top:8px">① ③ 각 2회 — 쏠림 없음</div>
+      </div>
+    </div>
+
+    <div class="strat">
+      <div class="strat-head">
+        <span class="badge badge-red">킬러 3점</span>
+        <span class="strat-title">31~34번 빈칸추론 심층 분석 (12회 직접 분석)</span>
+      </div>
+      <ul>
+        <li><strong>빈칸의 73%가 첫 문장 아니면 끝 문장</strong> — 48문항(12회×4) 중 끝 문장 20개(42%)·첫 문장 15개(31%)·중간 13개(27%). <strong>빈칸이 어디든 첫 문장과 끝 문장을 먼저 읽으면 논리 축이 잡힌다.</strong></li>
+        <li><strong>31번은 끝→앞으로 이동 중</strong> — 25수능부터 4회 연속 첫 문장 빈칸. 뒤 문장 전체가 근거 → 역추론 필요. 체감 난이도 상승의 직접 원인</li>
+        <li><strong>33·34번(킬러)은 끝 문장 집중</strong> — 둘 다 끝 문장 빈칸이 6회로 최다. 지문을 끝까지 읽고 결론을 추론하는 구조</li>
+        <li><strong>정답 번호</strong> — 31번은 ②(46%)·⑤로 쏠림이 있으나, 32·34번은 분산형이라 번호 추측 금물. 33번은 ①(46%)·④ 집중</li>
+        <li>오답 3대 패턴: ①근처 단어 재활용(범위 혼동) ②반대 방향 개념(역관계) ③표면 유사 일반어</li>
+        <li><strong>1등급 전략</strong>: 첫 문장·끝 문장 먼저 → 빈칸 주변 3문장으로 45초 결정</li>
+        <li><strong>2등급 전략</strong>: 오답 소거 후 남은 2개에서 지문 전체 재스캔(근거 문장 위치 확인)</li>
+      </ul>
+    </div>
+
+    <div style="margin-top:2rem;margin-bottom:1rem">
+      <div style="font-size:13px;font-weight:700;color:var(--muted);margin-bottom:10px">31번 빈칸 위치 추이 — 끝 문장 → 첫 문장 이동 (12회)</div>
+      <div class="chart-box chart-box-lg"><canvas id="chartBlank31" aria-label="31번 빈칸 위치 추이 라인차트"></canvas></div>
+      <div style="margin-top:12px;padding:12px 16px;background:var(--bg-card);border:1px solid var(--border);border-left:3px solid var(--navy);border-radius:6px;font-size:12.5px;line-height:1.85;color:var(--text)">
+        <div style="margin-bottom:6px"><strong style="color:var(--navy)">그래프 읽는 법</strong> — 빈칸이 지문의 어느 문장에 있는지(첫 / 중간 / 끝).</div>
+        <div style="margin-bottom:4px"><strong style="color:var(--amber-dark)">22수능~24수능</strong> — 빈칸이 주로 <strong>끝 문장</strong>. 앞 논지를 따라 읽다 보면 자연스럽게 빈칸 근거가 쌓이는 구조.</div>
+        <div><strong style="color:#c0392b">25수능 이후 4회 연속</strong> — 빈칸이 <strong>첫 문장</strong>으로 이동. 근거가 지문 전체에 퍼져 있어 뒤를 다 읽고 역으로 첫 문장을 복원해야 한다. 체감 난이도가 높아진 직접 원인.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="bias">
+  <div class="wrap">
+    <p class="sec-label">참고 A · 정답 쏠림</p>
+    <h2 class="sec-title">정답 쏠림 패턴 TOP 문항</h2>
+    <p class="sec-desc">특정 번호가 통계적으로 유의미하게 쏠린 문항. 시험장 멘탈 관리에 활용하되, 반드시 근거 확인 후 마킹.</p>
+
+    <div class="card" style="overflow:auto;margin-bottom:1.5rem">
+      <table>
+        <thead>
+          <tr>
+            <th>문항</th>
+            <th>유형</th>
+            <th>최빈 정답</th>
+            <th>빈도</th>
+            <th>비율</th>
+            <th>분포 (①~⑤)</th>
+          </tr>
+        </thead>
+        <tbody id="biasTable"></tbody>
+      </table>
+    </div>
+
+    <div class="strat green">
+      <div class="strat-head">
+        <span class="badge badge-green">40번</span>
+        <span class="strat-title">요약문 — ① 쏠림 62% (8/13)</span>
+      </div>
+      <ul>
+        <li>요약문은 글의 핵심 주장을 (A)(B) 두 단어로 축약. 선지는 주로 반의어 쌍으로 구성</li>
+        <li>글 첫 문장 + 마지막 문장 → 요약 (A)(B) 각 대입 → 의미 성립 여부 확인</li>
+        <li>① 쏠림이지만 최근 3회(26학년도)는 ②④③ → 맹신 금지. 근거 확인 필수</li>
+        <li>배점 2점. 시간 대비 효율 최고. <strong>1분 이내 해결 목표.</strong></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="heatmap">
+  <div class="wrap">
+    <p class="sec-label">참고 B · 전체 히트맵</p>
+    <h2 class="sec-title">전 문항 정답 히트맵 (1~45번)</h2>
+    <p class="sec-desc">1~45번 전체 × 13회차 정답번호. 색이 진할수록 높은 번호(⑤), 밝을수록 낮은 번호(①). 회색 구분선이 듣기(1~17)와 독해(18~45) 경계.</p>
+
+    <div class="card" style="padding:1.5rem">
+      <div class="heatmap-wrap">
+        <div class="heatmap" id="heatmapGrid"></div>
+      </div>
+      <div style="display:flex;gap:16px;align-items:center;margin-top:16px;flex-wrap:wrap">
+        <span style="font-size:12px;color:var(--muted)">정답번호</span>
+        <div style="display:flex;gap:6px;align-items:center">
+          <div style="width:16px;height:16px;border-radius:3px;background:#EDF5FA"></div><span style="font-size:11px;color:var(--muted)">①</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#9abfd8"></div><span style="font-size:11px;color:var(--muted)">②</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#4a8ab5"></div><span style="font-size:11px;color:var(--muted)">③</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#FFA723"></div><span style="font-size:11px;color:var(--muted)">④</span>
+          <div style="width:16px;height:16px;border-radius:3px;background:#00457F"></div><span style="font-size:11px;color:var(--muted)">⑤</span>
+        </div>
+        <span style="font-size:12px;color:var(--muted)">/ 테두리: 수능</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
 <section id="rounds">
   <div class="wrap">
-    <p class="sec-label">SECTION 11</p>
+    <p class="sec-label">참고 C · 회차표</p>
     <h2 class="sec-title">회차별 정답 전체 표</h2>
     <p class="sec-desc">13회차 × 주요 28문항 정답 원본 데이터. 가로 스크롤 가능.</p>
     <div class="card" style="overflow:auto;padding:1rem">
